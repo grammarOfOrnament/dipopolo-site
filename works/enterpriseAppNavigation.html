@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason DiPopolo</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Flowbite CDN (Head) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="icon" type="image/x-icon" href="https://jasondipopolo.com/icon-me.svg">
+
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li>
+          <li>
+            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Works</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Video Hero Section -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="px-4 py-8 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white tracking-tight">MyWaypoints Navigation UX</h1>
+        <p class="mb-8 font-light text-gray-500 md:text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">In-depth card sorting and user interview sessions with our users swing our navigation's grouping, labels, and overall user comprehension in a powerful, new direction.</p>
+        <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="#case-study" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black dark:text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                Jump to My Process
+            </a>
+            <a href="https://www.figma.com/file/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?type=design&node-id=133-2&mode=design" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                Live Preview in Figma
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>  
+        </div>
+        <div class="flex justify-center items-center my-8 lg:my-16 divide-x divide-gray-200 dark:divide-gray-700">
+            <div class="flex pr-3 space-x-2 sm:pr-5">
+                <img data-tooltip-target="tooltip-lucid" class="h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/Lucid-Logo.png" alt="bonnie avatar">
+                <div id="tooltip-lucid" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Lucid
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <img data-tooltip-target="tooltip-excel" class="h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/Excel-Logo.png" alt="jese avatar">
+                <div id="tooltip-excel" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Excel
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <img data-tooltip-target="tooltip-affinity" class="w-6 h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/AffinityPublisher-Logo.png" alt="leslie avatar">
+                <div id="tooltip-affinity" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Affinity Publisher
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+                <img data-tooltip-target="tooltip-premiere" class="w-6 h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/Premiere-Logo.png" alt="thomas avatar">
+                <div id="tooltip-premiere" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  Adobe Premiere
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+            <a href="#" class="pl-3 text-gray-900 sm:pl-5 dark:text-white"> 
+                <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
+                  <span class="pr-2 material-symbols-outlined">diversity_1</span>
+                  UX
+                </span>
+            </a> 
+        </div>
+        <script src="https://fast.wistia.com/embed/medias/z4kifno01r.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_z4kifno01r seo=true videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/z4kifno01r/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+        <!-- <iframe class="mx-auto w-full max-w-2xl h-64 rounded-lg sm:h-96" src="https://www.youtube.com/embed/mTAupMv-3t8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </div>
+</section>
+
+<!-- Addressing the Problem -->
+<section class="bg-white dark:bg-gray-900 antialiased">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+      <div id="case-study" class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+          Telling the story of a massive platform's navigation redesign
+        </h2>
+        <p class="mt-4 text-base font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+          How I took a step towards learning more about a platform's navigation and information architecture through it's users.
+        </p>
+      </div>
+  
+      <div class="mt-12 space-y-16 sm:mt-16">
+        <div class="flex flex-col lg:items-center lg:flex-row gap-y-8 sm:gap-y-12 lg:gap-x-1 xl:gap-x-1">
+          
+  
+          <div class="w-full space-y-6 lg:max-w-lg shrink-0 xl:max-w-2xl">
+            <div class="space-y-3">
+                <p class="inline-flex items-center text-lg font-medium text-emerald-600 dark:text-primary-500">
+                    Page: MyVector Homepage Before UX input
+                </p>
+              <h3 class="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl dark:text-white">
+                Breaking years of zero UX input in sitemap architecture
+              </h3>
+              <p class="text-base font-normal text-gray-500 sm:text-lg dark:text-gray-400">
+                Navigation was a mess, with 3 disjointed main nav menus, requiring consolidation. 
+              </p>
+              
+                <!-- <ul class="max-w-lg space-y-1 text-gray-500 list-disc list-outside dark:text-gray-400 pl-5">
+                    <li>
+                        Flagged 3 disjointed main nav menus, pushing for consolidation.
+                    </li>
+                    <li>
+                        Emphasized ADA compliance via 2 or more access points to pages.
+                    </li>
+                    <li>
+                        Urged card sorting for user-centered navigation for the massive app.
+                    </li>
+                </ul> -->
+
+            </div>
+  
+            <a href="https://www.figma.com/file/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?type=design&node-id=134-2&mode=design" title=""
+              class="text-black dark:text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              role="button">
+              View Problems
+              <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+
+
+          <div>
+            <img class="object-cover w-full rounded-lg dark:hidden" src="/images/3BadNavs-NavStudy.png" alt="">
+            <img class="object-cover w-full rounded-lg shadow-lg dark:block hidden"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard-dark.jpg" alt="">
+          </div>
+        </div>
+
+
+            <!-- Vertical Line -->
+            <div class="flex justify-center h-24">
+              <div style="border-left: 4px dotted #34d399; height: 100px;"></div>
+            </div>
+
+        <div class="mt-12 space-y-16 sm:mt-16">
+          <div class="flex flex-col lg:items-center lg:flex-row gap-y-8 sm:gap-y-12 lg:gap-x-8 xl:gap-x-8">
+            <div>
+              <img class="object-cover w-full rounded-lg dark:hidden" src="/images/PerformUXResearch-NavStudy.png" alt="">
+              <img class="object-cover w-full rounded-lg shadow-lg dark:block hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard-dark.jpg" alt="">
+            </div>
+
+        <div class="w-full space-y-6 lg:max-w-lg shrink-0 xl:max-w-2xl">
+          <div class="space-y-3">
+            
+            <p class="inline-flex items-center text-lg font-medium text-emerald-600 dark:text-primary-500">
+              Screenshot: Card Sort with Users
+          </p>
+            <h3 class="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl dark:text-white">
+              Performed 15 sessions of 88-card Moderated Card Sorts with 20 users
+            </h3>
+            <p class="text-base font-normal text-gray-500 sm:text-lg dark:text-gray-400">
+              And user interviews where users stress tons of opportunities for improvement.
+            </p>
+          </div>
+
+          <!-- <ul class="max-w-lg space-y-1 text-gray-500 list-disc list-outside dark:text-gray-400 pl-5">
+              <li>
+                  Proved 33/88 page titles failed to be comprehended by 80%+ users
+              </li>
+              <li>
+                  Abbreviated page titles proved to challenge users.
+              </li>
+              <li>
+                  Captured frustrations on a lack of links to existing pages and a tendency we have to recreate “similar, but different” experiences in new locations.
+              </li>
+          </ul> -->
+
+          <a href="https://www.figma.com/file/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?type=design&node-id=134-3&mode=design" title=""
+            class="text-black dark:text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            role="button">
+            View more data
+            <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vertical Line -->
+    <div class="flex justify-center h-6">
+      <div style="border-left: 4px dotted #34d399; height: 100px;"></div>
+    </div>
+
+      <!-- Final Project -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="max-w-screen-xl px-4 pt-8 mx-auto text-center lg:pt-16 lg:px-12">
+      <p class="inline-flex items-center text-lg font-medium text-emerald-600 dark:text-primary-500">
+        Page: Homepage (Mega Menu Opened)
+      </p>
+      <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Data-Informed Mega Menu + More</h1>
+      <p class="mb-8 font-light text-gray-500 md:text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">For such a deep platform, collaboration with UI designers led to a new navbar with user-centered page groupings and search functionality.</p>
+      <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+          <!-- <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-black dark:text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+              Free trial for 30 days
+          </a> -->
+          <a href="https://www.figma.com/file/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?type=design&node-id=134-3&mode=design" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+              View Results in Figma
+              <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          </a>  
+      </div> 
+      <img class="mx-auto mb-5 lg:mb-8 dark:border-gray-600 z-1 dark:hidden" src="/images/MegaMenuWithSearch-NavStudy.png" alt="dashboard overview">
+      <img class="mx-auto mb-5 lg:mb-8 border border-gray-200 rounded-lg shadow-xl dark:border-gray-600 hidden dark:block z-1" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/dashboard-mockup-dark.svg" alt="dashboard overview dark">
+  </div>
+  <div class="pt-48 lg:pb-16 pb-8 -mt-48 bg-gray-50 sm:pt-80 sm:-mt-80 dark:bg-gray-800 z-2">
+      <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+          <div class="flex flex-wrap items-center justify-center mt-8 text-gray-500 sm:justify-between">
+                 
+          </div>
+      </div> 
+  </div>
+</section>
+  
+        <div class="flex flex-col lg:items-center lg:flex-row gap-y-8 sm:gap-y-12 lg:gap-x-16 xl:gap-x-16 my-16">
+          <div class="lg:order-2">
+            <img class="object-cover w-full rounded-lg dark:hidden"
+              src="/images/MyProfile-NavStudy.png" alt="">
+            <img class="object-cover w-full rounded-lg shadow-lg dark:block hidden"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/agency-landing-page-dark.jpg" alt="">
+          </div>
+  
+          <div class="w-full space-y-6 lg:max-w-lg shrink-0 xl:max-w-2xl lg:order-1">
+            <div class="space-y-3">
+              <p class="inline-flex items-center text-lg font-medium text-emerald-600 dark:text-primary-500">
+                Page: My Profile
+              </p>
+                <h3 class="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl dark:text-white">
+                  Discovered users wish to find way more info on themselves on their profile
+                </h3>
+              <p class="text-base font-normal text-gray-500 sm:text-lg dark:text-gray-400">
+                Simply listing links to pages that include info that belong to a user allows them to see it all in one place rather than scattered across the site. 
+              </p>
+            </div>
+            <dl class="grid gap-8 mt-8 text-gray-900 sm:grid-cols-2 lg:gap-20 lg:mt-14 lg:grid-cols-2 dark:text-white">
+              <div class="flex flex-col">
+                  <dt class="mb-2 text-3xl md:text-4xl font-extrabold">9/15 users</dt>
+                  <dd class="font-light text-gray-500 dark:text-gray-400">created a group to place “their things”</dd>
+              </div>
+              <div class="flex flex-col">
+                  <dt class="mb-2 text-3xl md:text-4xl font-extrabold">7/9 users</dt>
+                  <dd class="font-light text-gray-500 dark:text-gray-400">named the group something synonymous with “My Profile”</dd>
+              </div>
+          </dl>
+              </div>
+          </div>        
+
+          <div class="mt-12 space-y-16 sm:mt-16">
+            <div class="flex flex-col lg:items-center lg:flex-row gap-y-8 sm:gap-y-12 lg:gap-x-8 xl:gap-x-8">
+              <div>
+                <img class="object-cover w-full rounded-lg dark:hidden" src="/images/UpdateMyProfile-NavStudy.png" alt="">
+                <img class="object-cover w-full rounded-lg shadow-lg dark:block hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard-dark.jpg" alt="">
+                <span class="font-bold text-red-500">*</span>
+                <span class="text-base font-normal text-gray-500 sm:text-lg dark:text-gray-400">
+                  Recommendation from in-house experts
+                </span>
+              </div>
+  
+          <div class="w-full space-y-6 lg:max-w-lg shrink-0 xl:max-w-2xl">
+            <div class="space-y-3">
+              
+              <p class="inline-flex items-center text-lg font-medium text-emerald-600 dark:text-primary-500">
+                Pages: My Profile (top) and Update My Profile (bottom)
+              </p>
+              <h3 class="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl dark:text-white">
+                Users confuse pages with similar or generic titles
+              </h3>
+              <p class="text-base font-normal text-gray-500 sm:text-lg dark:text-gray-400">
+                And other times, they reasonably disagree with our in-house experts.
+              </p>
+            </div>
+
+            <dl class="grid gap-8 mt-8 text-gray-900 sm:grid-cols-2 lg:gap-20 lg:mt-14 lg:grid-cols-2 dark:text-white">
+              <div class="flex flex-col">
+                  <dt class="mb-2 text-3xl md:text-4xl font-extrabold">18%</dt>
+                  <dd class="font-light text-gray-500 dark:text-gray-400">of non-admin page placement, users <i>disagreed</i> with company's in-house experts</dd>
+              </div>
+              <div class="flex flex-col">
+                <dt class="mb-2 text-3xl md:text-4xl font-extrabold">38%</dt>
+                <dd class="font-light text-gray-500 dark:text-gray-400">of page's original titles failed to be comprehended by 80% or more users</dd>
+            </div>
+          </dl>
+  
+            <a href="https://www.figma.com/file/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?type=design&node-id=134-3&mode=design" title=""
+              class="text-black dark:text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              role="button">
+              View more data
+              <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <!-- Vertical Line -->
+      <div class="flex justify-center h-24">
+        <div style="border-left: 4px dotted #34d399; height: 100px;"></div>
+      </div>
+
+<!-- Closing -->
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+      <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+          <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">A small step toward an <span class="font-extrabold">intuitive</span> future</h2>
+          <p class="mb-4 font-light">Lower UX maturity at the company meant having to prove the ROI of UX and be scrappy with the tools that we had. I was grateful to lead this UX research initiative on a massive platform that has a deep need for improved information architecture. While I performed the UX work alone, I could not have done the project without the UI designers, my manager, business subject matter experts, and our user participants.</p>
+          <p class="mb-4 font-medium">To abide by a non-disclosure agreement, company, client, and product identities have been obscured in this case study.</p>
+          <a href="/#works" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+              Check out more of my work
+              <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+          </a>
+      </div>
+  </div>
+</section>
+
+  <!-- Image Gallery -->
+  <!-- <section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
+        <p class="font-light text-gray-500 sm:text-lg md:px-20 lg:px-38 xl:px-48 dark:text-gray-400">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
+        <div class="gap-4 mt-8 sm:grid sm:grid-cols-4 sm:mt-12">
+            <img class="col-span-2 mb-4 sm:mb-0 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-1.png" alt="content gallery 1">
+            <img class="hidden col-span-1 sm:block rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-2.png" alt="content gallery 2">
+            <img class="hidden col-span-1 sm:block rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="content gallery 3">
+            <img class="hidden col-span-1 sm:block rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-4.png" alt="content gallery 4">
+            <img class="col-span-2 rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-5.png" alt="content gallery 5">
+            <img class="hidden col-span-1 sm:block rounded-lg" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-6.png" alt="content gallery 6">
+        </div>
+    </div>
+</section> -->
+
+<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+  <!-- More Case Studies -->
+  <aside aria-label="Related articles" class="bg-white dark:bg-gray-900 py-8 lg:py-24 antialiased">
+    <div class="px-4 mx-auto max-w-screen-xl">
+        <h2 class="mb-6 lg:mb-8 text-2xl font-bold text-gray-900 dark:text-white">More Case Studies</h2>
+        <div class="grid gap-6 lg:gap-12 md:grid-cols-2">
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mr-5 max-w-sm" alt="Image 1">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">Resume Builder Redesign</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Sloppy, non-intuitive layout is revamped into an easy to use product via UI and visual design best practices.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                      Read the Case Study
+                    </a>
+                </div>
+            </article>
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-2.png" class="mr-5 max-w-sm" alt="Image 2">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">Halfway</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Leveraging Google Maps APIs to help users find places to meet up halfway in between each other. Built with Node.js.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                      Read the Case Study
+                    </a>
+                </div>
+            </article>
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png" class="mr-5 max-w-sm" alt="Image 3">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">SMY Calculator</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Complex customer ask had our company stumped at a standstill for years until user interviews followed by iterative design swiftly unstuck us.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                        Read the Case Study
+                    </a>
+                </div>
+            </article>
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mr-5 max-w-sm" alt="Image 4">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">Grid Eyes</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Draw grid-based vector graphics like logos, icons, and illustrations using an extensive library of grids. Built with Node.js and Tailwind CSS.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                      Read the Case Study
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+  </aside>
+
+
+  <!-- Footer -->
+  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            Jason DiPopolo    
+        </a>
+        <p class="my-6 text-gray-500 dark:text-gray-400">Designing experiences for the web.</p>
+        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Works</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+            </li>
+            <!-- <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
+            </li> -->
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2024 <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights Reserved</span>
+    </div>
+  </footer>
+  
+    <!-- Flowbite CDN (End of Body) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason DiPopolo</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Flowbite CDN (Head) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="icon" type="image/x-icon" href="https://jasondipopolo.com/icon-me.svg">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li>
+          <li>
+            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Works</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="bg-white dark:bg-gray-900 antialiased">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+        <div class="text-center">
+            <div>
+                <h2 class="text-3xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
+                    Halfway
+                    <!-- <span class="md:block">A User-Centered Approach</span> -->
+                </h2>
+                <p class="mt-4 text-base font-normal text-gray-500 dark:text-gray-400 md:max-w-3xl md:mx-auto sm:text-xl">
+                    Leveraging Google Maps APIs to help users find places to meet up halfway in between each other. Built with Node.js.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col mt-6 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="#case-study" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black dark:text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                Jump to My Process
+            </a>
+            <a href="https://www.figma.com/file/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?type=design&node-id=133-2&mode=design" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                Try the App
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>  
+        </div>
+
+        <div class="my-8 sm:my-16">
+            <div class="relative mx-auto border-gray-800 dark:border-gray-800 dark:bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px]">
+                <div class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+                <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                <div class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                <div class="rounded-[2.5rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-light.png" class="dark:hidden w-[272px] h-[572px]" alt="">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/mockup-1-dark.png" class="hidden dark:block w-[272px] h-[572px]" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-5 sm:gap-2 sm:mt-8">
+            
+                <div class="flex space-x-2">
+                    <img data-tooltip-target="tooltip-lucid" class="h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/Lucid-Logo.png" alt="bonnie avatar">
+                    <div id="tooltip-lucid" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      Lucid
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <img data-tooltip-target="tooltip-excel" class="h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/Excel-Logo.png" alt="jese avatar">
+                    <div id="tooltip-excel" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      Excel
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <img data-tooltip-target="tooltip-affinity" class="w-6 h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/AffinityPublisher-Logo.png" alt="leslie avatar">
+                    <div id="tooltip-affinity" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      Affinity Publisher
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <img data-tooltip-target="tooltip-premiere" class="w-6 h-6 border-2 border-white dark:border-gray-800 grayscale hover:grayscale-0" src="/logos/Premiere-Logo.png" alt="thomas avatar">
+                    <div id="tooltip-premiere" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      Adobe Premiere
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </div>
+
+            <div class="w-px mx-5 h-8 bg-gray-200 dark:bg-gray-700"></div>
+            <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
+                <span class=" material-symbols-outlined">code</span>
+                Frontend
+              </span>
+            <span
+                  class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                  <span class="pr-2 material-symbols-outlined">data_object</span>
+                  Backend
+            </span>    
+
+        </div>
+    </div>
+</section>
+
+<!-- Section -->
+<section id="case-study" class="bg-[url('https://images.unsplash.com/photo-1594904351111-a072f80b1a71?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-cover bg-center bg-gray-700 bg-blend-multiply ">
+    <div class="relative py-8 px-4 mx-auto max-w-screen-xl text-white lg:py-16 z-1">
+        <div class="mb-6 max-w-screen-lg lg:mb-0">
+            <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl">What happens when a user inputs 2 addresses and clicks "Find Halfway Point"</h1>
+            <p class="mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl">I had to problem-solve to figure out how this would all work behind the scenes in the code.</p>
+            <!-- <a href="#" class="inline-flex items-center py-3 px-5 font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-900 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                Learn more about the plan
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a> -->
+        </div> 
+        <div class="grid gap-8 pt-8 lg:pt-12 mt-8 lg:mt-12 border-t border-gray-600 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+                <h2 class="mb-1 text-lg font-bold">Geocode</h2>
+                <p class="mb-1 text-sm text-gray-400">Addresses are converted to sets of latitude and longitude with the Google Maps API</p>
+                <a href="#" class="inline-flex items-center text-sm font-semibold text-primary-500 hover:underline">
+                    Read more
+                    <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <div>
+                <h2 class="mb-1 text-lg font-bold">Do the Math</h2>
+                <p class="mb-1 text-sm text-gray-400">A formula uses our sets of latitude and longitude to find the halfway point's coordinates</p>
+                <a href="#" class="inline-flex items-center text-sm font-semibold text-primary-500 hover:underline">
+                    Read more
+                    <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <div>
+                <h2 class="mb-1 text-lg font-bold">Reverse Engineer the Links</h2>
+                <p class="mb-1 text-sm text-gray-400">on Google Maps to give users links to their specific query on Halfway</p>
+                <a href="#" class="inline-flex items-center text-sm font-semibold text-primary-500 hover:underline">
+                    Read more
+                    <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+        </div>              
+    </div>
+</section>
+
+<!-- Section -->
+<section class="bg-white dark:bg-gray-900">
+    <div class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+        <div>
+            <h2 class="mb-4 text-5xl tracking-tight font-bold text-gray-900 dark:text-white">Matching the Designer's Vision</h2>
+            <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">According to the online image comparison tool, Diffchecker, my frontend development compared to the designer's UI design has a...</p>
+            <h2 class="mb-1 text-5xl tracking-tight font-bold text-gray-900 dark:text-white">99%</h2>
+            <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Visual match</p>
+            
+            <a href="#" title=""
+            class="text-black dark:text-white bg-primary-700 justify-center hover:bg-primary-800 inline-flex items-center  focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            role="button">
+            Try the App
+            <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+          </a>
+
+        </div>
+        <img class="hidden mx-auto w-64 md:flex" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/iphone-mockup.png" alt="mobile app">
+    </div>
+</section>
+
+<!-- Closing -->
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Powering innovation at <span class="font-extrabold">200,000+</span> companies worldwide</h2>
+            <p class="mb-4 font-light">Track work across the enterprise through an open, collaborative platform. Link issues across Jira and ingest data from other software development tools, so your IT support and operations teams have richer contextual information to rapidly respond to requests, incidents, and changes.</p>
+            <p class="mb-4 font-medium">Deliver great service experiences fast - without the complexity of traditional ITSM solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
+            <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+                Check out more of my work
+                <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+   <!-- More Case Studies -->
+   <aside aria-label="Related articles" class="bg-white dark:bg-gray-900 py-8 lg:py-24 antialiased">
+    <div class="px-4 mx-auto max-w-screen-xl">
+        <h2 class="mb-6 lg:mb-8 text-2xl font-bold text-gray-900 dark:text-white">More Case Studies</h2>
+        <div class="grid gap-6 lg:gap-12 md:grid-cols-2">
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mr-5 max-w-sm" alt="Image 1">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">Resume Builder Redesign</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Sloppy, non-intuitive layout is revamped into an easy to use product via UI and visual design best practices.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                      Read the Case Study
+                    </a>
+                </div>
+            </article>
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="/images/CardSort-FeaturedImg.png" class="mr-5 max-w-72 rounded-lg" alt="Image 2">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">MyWaypoints Navigation UX</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">In-depth card sorting sessions with our users swing our navigation's grouping, labels, and overall user comprehension in a powerful, new direction.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                      Read the Case Study
+                    </a>
+                </div>
+            </article>
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png" class="mr-5 max-w-sm" alt="Image 3">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">SMY Calculator</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Complex customer ask had our company stumped at a standstill for years until user interviews followed by iterative design swiftly unstuck us.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                        Read the Case Study
+                    </a>
+                </div>
+            </article>
+            <article class="flex flex-col xl:flex-row">
+                <a href="#" class="mb-2 xl:mb-0">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mr-5 max-w-sm" alt="Image 4">
+                </a>
+                <div class="flex flex-col justify-center">
+                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                        <a href="#">Grid Eyes</a>
+                    </h2>
+                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Draw grid-based vector graphics like logos, icons, and illustrations using an extensive library of grids. Built with Node.js and Tailwind CSS.</p>
+                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                      Read the Case Study
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+  </aside>
+  
+  <!-- Footer -->
+  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            Jason DiPopolo    
+        </a>
+        <p class="my-6 text-gray-500 dark:text-gray-400">Designing experiences for the web.</p>
+        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Works</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+            </li>
+            <!-- <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
+            </li> -->
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2024 <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights Reserved</span>
+    </div>
+  </footer>
+
+    <!-- Flowbite CDN (End of Body) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html>
