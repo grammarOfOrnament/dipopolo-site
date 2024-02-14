@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason DiPopolo</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Flowbite CDN (Head) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="icon" type="image/x-icon" href="/logos/icon-me.svg">
+
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li>
+          <li>
+            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Works</a>
+          </li>
+          <li>
+            <a href="/about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="/blog.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Blog</a>
+          </li>
+          <li>
+            <a href="/contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Blog Hero Layout -->
+<section class="bg-white dark:bg-gray-900 antialiased">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-20">
+        <article>
+          <a href="/blogPosts/article-letgo.html" title="">
+            <img class="object-cover h-96 w-full rounded-lg" src="https://imgs.search.brave.com/hPm71SKWrdB1jHxasmRLbHFOcVQLQaEBl1sZPCiOB1g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9i/L2I5L0Nhc3Bhcl9E/YXZpZF9GcmllZHJp/Y2hfLV9XYW5kZXJl/cl9hYm92ZV90aGVf/c2VhX29mX2ZvZy5q/cGc" alt="Wanderer above the Sea of Fog by Caspar David Friedrich">
+          </a>
+  
+          <div class="mt-5 space-y-3">
+            <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex gap-2 items-center px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+              <span class="material-symbols-outlined">edit_note</span>
+              Article
+            </span>
+  
+            <h2 class="text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
+              <a href="/blogPosts/article-letgo.html" class="hover:underline" title="">
+                Embracing Uncertainty, Letting Go, and Taking Action
+              </a>
+            </h2>
+  
+            <div class="flex items-center gap-3">
+              <div class="text-md font-medium leading-tight text-gray-900 dark:text-white">
+                <div class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                  Posted Oct 2023
+                </div>
+              </div>
+            </div>
+  
+            <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                In the information age, it has become too easy to overfixate on numbers and certainty before taking action. It seems healthy enough. Why embrace uncertainty? Certainty can take away your freedom.
+            </p>
+  
+            <a href="/blogPosts/article-letgo.html" title=""
+              class="inline-flex items-center text-base font-semibold leading-tight text-primary-600 hover:underline dark:text-primary-500">
+              Read more
+              <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        </article>
+  
+        <div class="space-y-8">
+          <article>
+            <div class="space-y-3">
+                <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex gap-2 items-center px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                    <span class="material-symbols-outlined">import_contacts</span>
+                    Book Overview
+                  </span>
+  
+              <h2 class="text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
+                <a href="/blogPosts/article-howtobegreatatyourjob.html" class="hover:underline" title="">
+                    How to Be Great at Your Job
+                </a>
+              </h2>
+  
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                I picked up Justin Kerr’s How to Be Great at Your Job. I’m always interested in picking apart how to best write emails or communicate in the workplace.
+              </p>
+  
+              <a href="/blogPosts/article-howtobegreatatyourjob.html" title=""
+                class="inline-flex items-center text-base font-semibold leading-tight text-primary-600 hover:underline dark:text-primary-500">
+                Read more
+                <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+  
+          <article>
+            <div class="space-y-3">
+                <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex gap-2 items-center px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                    <span class="material-symbols-outlined">import_contacts</span>
+                    Book Overview
+                  </span>
+  
+              <h2 class="text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
+                <a href="/blogPosts/article-talkingtohumans.html" class="hover:underline" title="">
+                    Talking to Humans
+                </a>
+              </h2>
+  
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                The top practices today in customer discovery for lean startup business models are covered in Giff Constable’s Talking to Humans. I wanted share what I learned in my time reading it.
+              </p>
+  
+              <a href="/blogPosts/article-talkingtohumans.html" title=""
+                class="inline-flex items-center text-base font-semibold leading-tight text-primary-600 hover:underline dark:text-primary-500">
+                Read more
+                <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+  
+          <article>
+            <div class="space-y-3">
+                <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex gap-2 items-center px-2.5 py-0.5 rounded dark:bg-primary-900 dark:text-primary-300">
+                    <span class="material-symbols-outlined">edit_note</span>
+                    Article
+                  </span>
+  
+              <h2 class="text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
+                <a href="/blogPosts/article-zerosum.html" class="hover:underline" title="">
+                    Shifting the Mindset: The Truth About Zero-Sum Games in Entrepreneurship
+                </a>
+              </h2>
+  
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                In the world of entrepreneurship, it’s not uncommon to encounter the concept of a zero-sum game. This belief suggests that for one party to win, another must lose. But is this perspective a helpful one?
+              </p>
+  
+              <a href="/blogPosts/article-zerosum.html" title=""
+                class="inline-flex items-center text-base font-semibold leading-tight text-primary-600 hover:underline dark:text-primary-500">
+                Read more
+                <svg aria-hidden="true" class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Posts -->
+  <!-- <section class="bg-white dark:bg-gray-900">
+    <div class="grid gap-8 py-8 px-4 mx-auto max-w-screen-xl lg:gap-16 lg:grid-cols-2 lg:py-16 lg:px-6 ">
+        <div>
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">More Posts</h2>
+            <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl">Writing and ideas are nothing without execution.</p>
+        </div> 
+        <div class="divide-y divide-gray-200 dark:divide-gray-700">
+            <article class="pb-6">
+                <div class="flex justify-between items-center mb-5 text-gray-500">
+                    <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                        <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                        Tutorial
+                    </span>
+                    <span class="text-sm">12 days ago</span>
+                </div>
+                <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <a href="#">How to quickly deploy a static website</a>
+                </h2>
+                <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers influence both web designers and developers.</p>
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="Michael Gouch portrait">
+                        <span class="font-medium dark:text-white">
+                            Michael Gouch
+                        </span>
+                    </div>
+                    <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:underline dark:text-primary-500">
+                        Read more
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </article> 
+            <article class="py-6">
+                <div class="flex justify-between items-center mb-5 text-gray-500">
+                    <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                        <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                        Article
+                    </span>
+                    <span class="text-sm">24 days ago</span>
+                </div>
+                <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <a href="#">Our first project with React</a>
+                </h2>
+                <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers influence both web designers and developers.</p>
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png" alt="Neil Sims portrait">
+                        <span class="font-medium dark:text-white">
+                            Neil Sims
+                        </span>
+                    </div>
+                    <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:underline dark:text-primary-500">
+                        Read more
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </article> 
+            <article class="pt-6">
+                <div class="flex justify-between items-center mb-5 text-gray-500">
+                    <span class="bg-primary-100 text-primary-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                        <svg class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd"></path><path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z"></path></svg>
+                        Article
+                    </span>
+                    <span class="text-sm">2 months ago</span>
+                </div>
+                <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <a href="#">Those HTML attributes you never use</a>
+                </h2>
+                <p class="mb-5 font-light text-gray-500 dark:text-gray-400">Static websites are now used to bootstrap lots of websites and are becoming the basis for a variety of tools that even influence both web designers and developers influence both web designers and developers.</p>
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-4">
+                        <img class="w-7 h-7 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="Roberta Casas portrait">
+                        <span class="font-medium dark:text-white">
+                            Roberta Casas
+                        </span>
+                    </div>
+                    <a href="#" class="inline-flex items-center font-medium text-primary-600 hover:underline dark:text-primary-500">
+                        Read more
+                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </article>           
+        </div>  
+    </div>
+    </section> -->
+
+    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+
+  <!-- Footer -->
+  <footer class="mt-12 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="/index.html" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            Jason DiPopolo    
+        </a>
+        <p class="my-6 text-gray-500 dark:text-gray-400">Designing experiences for the web.</p>
+        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Works</a>
+            </li>
+            <li>
+                <a href="/about.html" class="mr-4 hover:underline md:mr-6">About</a>
+            </li>
+            <li>
+                <a href="/blog.html" class="mr-4 hover:underline md:mr-6 ">Blog</a>
+            </li>
+            <li>
+                <a href="/contact.html" class="mr-4 hover:underline md:mr-6">Contact</a>
+            </li>
+            <!-- <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
+            </li> -->
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2024 <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights Reserved</span>
+    </div>
+  </footer>
+  
+    <!-- Flowbite CDN (End of Body) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html>

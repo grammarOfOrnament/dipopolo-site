@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason DiPopolo</title>
+
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Flowbite CDN (Head) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="icon" type="image/x-icon" href="/logos/icon-me.svg">
+
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li>
+          <li>
+            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Works</a>
+          </li>
+          <li>
+            <a href="/about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="/blog.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li>
+          <li>
+            <a href="/contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Blog Template -->
+<!-- 
+Install the "flowbite-typography" NPM package to apply styles and format the article content: 
+
+URL: https://flowbite.com/docs/components/typography/ 
+-->
+
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
+    <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
+        <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+            <header class="mb-4 lg:mb-6 not-format">
+                <address class="flex items-center mb-6 not-italic">
+                    <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                        <img class="mr-4 w-16 h-16 rounded-full" src="https://media.licdn.com/dms/image/D4E03AQGu-cm1rykOgw/profile-displayphoto-shrink_800_800/0/1702426598724?e=1711584000&v=beta&t=YKtdQWuBwE7_p0JB0e4OJuOmplYfcRWZlWqBT5Lbrg8" alt="Jese Leos">
+                        <div>
+                            <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">Jason DiPopolo</a>
+                            <p class="text-base text-gray-500 dark:text-gray-400">UX/UI Designer & Frontend Developer</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400"><time pubdate datetime="2022-02-08" title="February 8th, 2022">Sep 2020</time></p>
+                        </div>
+                    </div>
+                </address>
+                <h1 class="mb-4 text-4xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-5xl dark:text-white">Embracing Uncertainty, Letting Go, and Taking Action</h1>
+            </header>
+            <figure><img class="object-cover h-96 w-full rounded-lg" src="https://imgs.search.brave.com/hPm71SKWrdB1jHxasmRLbHFOcVQLQaEBl1sZPCiOB1g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9i/L2I5L0Nhc3Bhcl9E/YXZpZF9GcmllZHJp/Y2hfLV9XYW5kZXJl/cl9hYm92ZV90aGVf/c2VhX29mX2ZvZy5q/cGc" alt="">
+                <figcaption class="mt-2 text-gray-500">Wanderer above the Sea of Fog by Caspar David Friedrich</figcaption>
+            </figure>
+
+            <p class="mb-4 mt-4">In the information age, it has become too easy to overfixate on numbers and certainty before taking action. It seems healthy enough. Why embrace uncertainty? Certainty can take away your freedom. We hold onto and ought to let go of our tight grip on knowledge, and take action more. In this blog post, we’ll explore this concept in distinct contexts, revealing the transformative power of these principles.</p>
+
+            <h2 class="text-2xl font-semibold mt-8">The Freedom in Embracing Uncertainty: Letting Go of the Tight Grip on Knowledge</h2>
+
+            <p class="mb-4 mt-2">
+            Uncertainty is beautiful because it’s true. As much data as we collect, we can’t really know things, and yet, we often cling tightly to the illusion of knowledge as a security blanket.</p>
+            
+            <p class="mb-4 mt-4"><strong>Release the Grip:</strong> The first step in embracing uncertainty is to let go of our relentless need to know everything. Not everything can be understood.</p>
+            
+            <p class="mb-4 mt-4"><strong>Trust and Act:</strong> Instead of waiting for complete certainty, we should trust our ability to act even when we don’t have all the answers.</p>
+            
+            <p class="mb-4 mt-4"><strong>The Limits of Knowing:</strong> We exist in a world teeming with diverse perspectives and subjective experiences. Humility is recognizing that our knowledge has its limits.</p>
+            
+            <h2 class="text-2xl font-semibold mt-8">The Notebook Fallacy: Emphasizing Execution Over Idea Generation</h2>
+
+            <p class="mb-4 mt-2">
+            Author, Cal Newport’s “Notebook Fallacy” challenges the prevailing belief that ideas are paramount. Instead, it highlights the importance of execution over becoming idea factories. In the “Notebook Fallacy” concept, we learn:</p>
+            
+            <p class="mb-4 mt-4"><strong>Ideas Are Cheap:</strong> Ideas are useful, but they should not monopolize your creative process as they are easy to come by. They are merely the starting point.</p>
+            
+            <p class="mb-4 mt-4"><strong>Prioritize Execution:</strong> The real magic happens when you turn ideas into actions.</p>
+            
+            <p class="mb-4 mt-4"><strong>Notes and Writing Support Execution:</strong> While notes and writing are valuable tools for organization and idea development, they should not be the sole focus. They should serve as stepping stones to execution.</p>
+            
+            <h2 class="text-2xl font-semibold mt-8">Na’aseh v’nishma: The Power of ‘Doing First, Understanding Later’</h2>
+
+            <p class="mb-4 mt-2">
+            “Na’aseh v’nishma,” is a principle the Jews have long lived by based on what they've learned from God. It means “Do First, Understand Later.” It reveals a powerful truth about life and learning. In this context, we explored the following:</p>
+            
+            <p class="mb-4 mt-4"><strong>Often We Already Know What's Right:</strong> “Na’aseh v’nishma” encourages us to take action before we fully understand. In doing so, we clear the path for righteous and ethical actions.</p>
+            
+            <p class="mb-4 mt-4"><strong>Overthinking Hurdles:</strong> Prioritizing understanding over action can lead to overthinking and inaction. “Na’aseh v’nishma” is a reminder that sometimes, doing is the best way to understand.</p>
+            
+            <p class="mb-4 mt-4"><strong>A Guiding Principle:</strong> Whether in faith or life, this principle serves as a valuable guide for making decisions, taking action, and living righteously.</p>
+            
+            <h2 class="text-2xl font-semibold mt-8">Takeaways</h2>
+
+            <p class="mb-4 mt-2">
+            Prioritize execution, for it is often in the midst of the unknown that the grandest of masterpieces are created. Approach life with grace, humility, and a willingness to act, for in doing so, you will be more free.</p>
+            
+            
+            </article>
+    </div>
+  </main>
+  
+  <!-- Related Articles -->
+  <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800">
+    <div class="px-4 mx-auto max-w-screen-xl">
+        <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Related articles</h2>
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mb-5 rounded-lg" alt="Image 1">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Our first office</a>
+                </h2>
+                <p class="mb-4 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 2 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-2.png" class="mb-5 rounded-lg" alt="Image 2">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Enterprise design tips</a>
+                </h2>
+                <p class="mb-4  text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 12 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png" class="mb-5 rounded-lg" alt="Image 3">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">We partnered with Google</a>
+                </h2>
+                <p class="mb-4  text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 8 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mb-5 rounded-lg" alt="Image 4">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Our first project with React</a>
+                </h2>
+                <p class="mb-4  text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 4 minutes
+                </a>
+            </article>
+        </div>
+    </div>
+  </aside>
+
+
+  <!-- Footer -->
+  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            Jason DiPopolo    
+        </a>
+        <p class="my-6 text-gray-500 dark:text-gray-400">Designing experiences for the web.</p>
+        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Works</a>
+            </li>
+            <li>
+                <a href="/about.html" class="mr-4 hover:underline md:mr-6">About</a>
+            </li>
+            <li>
+                <a href="/blog.html" class="mr-4 hover:underline md:mr-6 ">Blog</a>
+            </li>
+            <li>
+                <a href="/contact.html" class="mr-4 hover:underline md:mr-6">Contact</a>
+            </li>
+            <!-- <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
+            </li> -->
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2024 <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights Reserved</span>
+    </div>
+  </footer>
+  
+    <!-- Flowbite CDN (End of Body) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html>

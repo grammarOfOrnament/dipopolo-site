@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason DiPopolo</title>
+
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Flowbite CDN (Head) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="icon" type="image/x-icon" href="/logos/icon-me.svg">
+
+</head>
+<body>
+    
+<!-- Navbar -->
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li>
+          <li>
+            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Works</a>
+          </li>
+          <li>
+            <a href="/about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="/blog.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li>
+          <li>
+            <a href="/contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Blog Template -->
+<!-- 
+Install the "flowbite-typography" NPM package to apply styles and format the article content: 
+
+URL: https://flowbite.com/docs/components/typography/ 
+-->
+
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
+    <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
+        <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+            <header class="mb-4 lg:mb-6 not-format">
+                <address class="flex items-center mb-6 not-italic">
+                    <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                        <img class="mr-4 w-16 h-16 rounded-full" src="https://media.licdn.com/dms/image/D4E03AQGu-cm1rykOgw/profile-displayphoto-shrink_800_800/0/1702426598724?e=1711584000&v=beta&t=YKtdQWuBwE7_p0JB0e4OJuOmplYfcRWZlWqBT5Lbrg8" alt="Jason DiPopolo">
+                        <div>
+                            <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">Jason DiPopolo</a>
+                            <p class="text-base text-gray-500 dark:text-gray-400">UX/UI Designer & Frontend Developer</p>
+                            <p class="text-base text-gray-500 dark:text-gray-400"><time pubdate datetime="2022-02-08" title="February 8th, 2022">Nov 2020</time></p>
+                        </div>
+                    </div>
+                </address>
+                <h1 class="mb-4 text-4xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-5xl dark:text-white">How to Be Great at Your Job</h1>
+            </header>
+            <figure><img src="/images/HowToBeGreatAtYourJob-BookOverview-Featuredimg.avif" alt="Image of Book">
+                <figcaption class="mt-2 text-gray-500">Justin Kerr's How to Be Great at Your Job</figcaption>
+            </figure>
+
+            <p class="mb-4 mt-4">I picked up Justin Kerr’s How to Be Great at Your Job as it was recommended by a UX Designer online and it caught my attention. I’m always interested in picking apart how to best perform these important things we often neglect and aren’t taught like writing emails or communicating in the workplace.</p>
+
+            <p class="mt-4">Below is what I’ll be talking about that I pulled from the book:</p>
+                <li>Being Early</li>
+                <li>Meeting with your boss weekly</li>
+                <li>Showing your work and claiming credit</li>
+                <li>Giving a good presentation</li>
+                <li>Sending great emails</li>
+                <li class="mb-4">How to balance work and life</li>
+            
+            <p class="mt-4"><strong class="text-2xl">Be Early</strong><br>Kerr’s logic on being early at work is simple:</p>
+            <li>Get to work early</li>
+            <li>Turn in your work early</li>
+            <li class="mb-4">Leave work early</li>
+            
+            <p class="mb-4 mt-4"><strong>Getting to work</strong> (even just an hour) early will differentiate you from the mediocrity pinned on those who show up on time. Not only that, but you’ve got - time to start your day by “replying to emails, reviewing your calendar, messaging people to remind them what you need from them, and more” that Justin Kerr suggests in the book.</p>
+            
+            <p class="mb-4 mt-4"><strong>Turning in your work early</strong> also rightfully earns some points with any boss. Rather than setting your deadline as the deadline or the morning of the deadline, it is much more impressive to hand in your work 24 hours earlier than the deadline. Hence this should be the true deadline you set in your personal calendar or schedule.</p>
+            
+            <p class="mb-4 mt-4"><strong>Leaving work early</strong> is a funny (yet great) idea from Kerr and I think he acknowledges that. Working longer could lead to people thinking your a hard worker, but often people will just think “you’re behind, can’t keep up, overwhelmed, don’t have a life, late on a project, and not good at your job.” Kerr mentions that you don’t need to ask for this, just do it. It can be 30 minutes or an hour. However early you get to work will likely determine soon you leave.</p>
+            
+            <p class="mt-4"><strong class="text-2xl">Meet Weekly with Your Boss</strong><br>The purpose of setting up a weekly 30 minute meeting is to stay on the same page with your boss by sharing updates, getting approvals, resolving issues, etc. To have a great meeting, Kerr says:</p>
+            <li>You schedule the meeting</li>
+            <li>You set and send an agenda for the meeting</li>
+            <li>You lead the meeting</li>
+
+            <p class="mb-4 mt-4"><strong>In scheduling</strong>, find a time where your boss is consistently free so you can continue these meetings. Tuesday, Wednesday, and Thursday mornings are often the best times according to Kerr due to Monday busy-ness and nobody liking meetings on Fridays.</p>
+
+            <p class="mb-4 mt-4"><strong>In sending your agenda</strong> to your boss, email bullet points on what you’ll cover before 5pm on the day before the meeting. According to Kerr, this ensures the meeting isn’t cancelled, helps you organize your thoughts, gives your boss a heads up, and show that you’re organized and good at your job.</p>
+
+            <p class="mb-4 mt-4"><strong>Leading the meeting</strong> for your boss shows that your reliable and allows them to relax for once whereas they typically are always in a leading position.</p>
+
+            <figure><img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image of white collared workers talking">
+                <figcaption class="mt-2 text-gray-500">Image from Christina @ wocintechchat.com</figcaption>
+            </figure>
+
+            <p class="mb-4 mt-4"><strong class="text-2xl">“Show Your Work” to Your Boss</strong><br>Austin Kleon, author of Show Your Work and my time in university excited me about the idea of showing my work. I always say “doing the work is just 10% of the job, presentation is 90%” which isn’t to say we should do poor work, but their should be an emphasis on delivery and rightfully claiming credit for work you’ve done.</p>
+
+            <!-- Continuing with the rest of the paragraphs -->
+
+            <p class="mb-4 mt-4">Kerr understands this well, differentiating between how most people view projects, what really happens, and lastly how he solves the problem.</p>
+
+            <p class="mb-4 mt-4"><strong>Here is what people think happens on a project:</strong><br>
+            1. Your boss asks you to do something.<br>
+            2. You go away and do it.<br>
+            3. You present it back to your boss.</p>
+
+            <p class="mb-4 mt-4"><strong>Here is what actually happens:</strong><br>
+            1. Your boss asks you to do something.<br>
+            2. You go away and work on it.<br>
+            3. Your boss asks you if you are working on the project.<br>
+            4. You say you are working on it.<br>
+            5. A few hours (or days) later your boss asks again if you are going to be ready for the deadline.<br>
+            6. You say yes.<br>
+            7. You present the project to your boss.</p>
+
+            <p class="mb-4 mt-4"><strong>How to fix the problem:</strong><br>
+            1. Your boss asks you to do something.<br>
+            2. You send your boss a quick email by EOD of how you will accomplish the project, and key specific timelines you will work toward, including check-in points (meaning these should be on your own schedule as well).<br>
+            3. You work on the project.<br>
+            4. You give your boss an update during your weekly 1:1 meetings or you give a quick (minimum effort) status email saying everything is on schedule. Keep reminding them of the timeline you had agreed to earlier. It’s usually best just to forward that original email with a quick comment.<br>
+            5. You send an email by 5:00pm the day before the project is due with a simple title and message: Pre-Read: Project X. “Hey Boss, I wanted to send you a copy of the final project in advance of tomorrow’s deadline. If you have any questions or comments I’m happy to adjust before the meeting tomorrow.”<br>
+            6. You turn in the project (at the meeting), etc.</p>
+
+            <!-- Continuing with the rest of the paragraphs -->
+
+            <p class="mb-4 mt-4">Working consistently this way will have your boss seeing you as more reliable than most people. Even if your on top of your projects, your boss doesn’t feel like you were relying on their check-ins, instead you supplied the check-ins yourself.</p>
+
+            <p class="mb-4 mt-4"><strong class="text-2xl">How to Give a Good Presentation</strong><br>
+            Kerr’s method to a good presentation is high impact and high recall which should be achieved through structure and content.</p>
+
+            <p class="mb-4 mt-4"><strong>Kerr’s Perfect Structure</strong><br>
+            The one-sentence overview “I am here to present The Boys Winter Outwear Collection.”</p>
+
+            <p class="mb-4 mt-4">Explain the structure “There are 3 main points I want to discuss.” (let them know how many points to listen for)</p>
+
+            <p class="mb-4 mt-4">Give them the headlines “I want to talk about nylon fabrication, length, and price points.”</p>
+
+            <p class="mb-4 mt-4">Present each topic “The first thing I wanted to talk about is nylon fabrication. Nylon fabrication is the biggest trend in the market and I see an opportunity for us to… OK, so that’s why I think nylon fabrication is going to be really important for us next season.” (Cue, present, summarize each topic)</p>
+
+            <p class="mb-4 mt-4">Tell them what’s next “OK, we’ve talked about length, so now I want to talk about price points. It looks like we have 5 minutes left for this last topic.” (Let them know that you’re keeping track of time and how much of their time you’re taking)</p>
+
+            <p class="mb-4 mt-4">The one-sentence conclusion “OK, so we have talked about nylon fabrication, why we’re going to add longer-length jackets, and opportunities to raise price points — does anyone have any questions?” (Remind everyone what you told them and open the floor to questions)</p>
+
+            <p class="mb-4 mt-4"><strong class="text-2xl">Kerr’s Perfect Content</strong><br>
+            Observe what is happening and what are you going to do about it.</p>
+
+            <p class="mb-4 mt-4">When it comes to what is happening, there is plenty to choose from. Choose one number to make and prove a point. Set a context that shows why you used that number over every other number, make people feel the weight of that number. Instead of saying, this item will be “25 cents cheaper to produce,” say “we’ll cut costs by 20%.” Lastly, make your number surprising. For example, instead of saying “we’ll cut costs just by decreasing the fabric weight by 0.4 grams” you can say “we’ll cut costs just by decreasing the weight of the fabric by the same weight as a single piece of tissue paper.” In this example, you’re getting visual to show how small the risk is in your proposal, making it easier to say yes.</p>
+
+            <p class="mb-4 mt-4"><strong>What you are going to do about something</strong> relies on using a frame of mindset. Someone made a slip-up in an organization my girlfriend is apart of and her and I were surprised that all the members were running back and forth, shouting to each other “we didn’t do X in time?! We’re f***ed!” Instead of offering solutions, everyone decided to make matters worse. Kerr recommends we say “X is happening, so I will do Y (by Z time).” Be specific and measurable. Taking the reigns instead of leaving other people to solve problems is how we lead.</p>
+
+            <figure><img src="https://images.unsplash.com/photo-1620287341401-e2945a4b9daa?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image of laptop displaying an email inbox">
+                <figcaption class="mt-2 text-gray-500">Image from Justin Morgan</figcaption>
+            </figure>
+            
+
+            <p class="mb-4 mt-4"><strong class="text-2xl">Writing Great Emails</strong><br>
+                Kerr’s 6 Requirements for an Awesome Email</p>
+                
+                <p class="mb-4 mt-4"><strong>Subject</strong> Specific, punchy, and action-oriented subject lines decide whether your email gets opened now, later, or never. Kerr’s example of a good subject is “Q2 Project: Action Required: Chris Goble + Maurice Skinfill”</p>
+                
+                <p class="mb-4 mt-4"><strong>Deadlines</strong> If there is a deadline, put it in your subject. Use bold, highlight it in red, whatever you need to do to make it obvious. Consider saying “Project X: Due Tuesday, 3:36pm” because it catches people’s attention more than 5:00pm or EOD.</p>
+                
+                <p class="mb-4 mt-4"><strong>Bullet Points</strong> Use one sentence bullet points. If you’re using more than one sentence, you’re rambling or making more than one point.</p>
+                
+                <p class="mb-4 mt-4"><strong>Jump to Conclusions</strong> Get to the point in the first sentence. You can write more after that, but assume that the first sentence is all they’ll read.</p>
+                
+                <p class="mb-4 mt-4"><strong>White Space</strong>Use the return key liberally between paragraphs and bullet points. Also, ditch any signature embellishments.</p>
+                
+                <p class="mb-4 mt-4"><strong>The Attachment Trap</strong> Assume your attachment won’t be opened. Provide a few key points to summarize and give context to your attachments. If you send an attachment, make sure it is formatted to print.</p>
+                
+                <p class="mb-4 mt-4"><strong class="text-2xl">Work and Life Balance</strong><br>
+                During the work week, Kerr recommends to get to work early (no surprise), eat lunch outside (bring co-workers and explore), or take a class.</p>
+                
+                <p class="mb-4 mt-4">Kerr recommends leaving work at work by putting your phone away, not bringing your work home from the office, and to acknowledge that nothing important happens between 7pm and 7am so don’t psyche yourself into thinking you have to worry about being present at those times.</p>
+                
+                <p class="mt-4">When it comes to taking time off, Kerr recommends volunteering during work hours (many companies have charities they’re connected to that you can work with) and take vacations. Kerr says we should:</p>
+                
+                <li>Ask for vacations well in advance to get approval.</li>
+                <li>Remain visible about your vacation and work right before your vacation. This way, people remember you’ll be absent and can see you deserve it.</li>
+                <li>Talk about your vacation before and after because “before” will give that visibility while the “after” will boost your personal brand.</li>
+                <li>Take a vacation when you’re on vacation! Don’t work, enjoy yourself, and don’t feel guilty about it.</li>
+                
+                <p class="mb-4 mt-4"><strong class="text-2xl">Conclusion</strong><br>
+                I typically read books based on subject, but this is the only book I’ve read and thought “wow I want to read more from this author” as Justin’s writing is so direct and full of wondrous insight. Kerr clearly lives by his own rules of conciseness he addresses in his book so I’d highly recommend reading it.</p>
+                
+                <p class="mb-4 mt-4">While there is plenty of information here, I plan on referring back to this article to criticize my own working life. If anyone’s found any insight here, I’d encourage them to do the same.</p>
+
+        </article>
+    </div>
+  </main>
+  
+  <!-- Related Articles -->
+  <aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800">
+    <div class="px-4 mx-auto max-w-screen-xl">
+        <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Related articles</h2>
+        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mb-5 rounded-lg" alt="Image 1">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Our first office</a>
+                </h2>
+                <p class="mb-4 text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 2 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-2.png" class="mb-5 rounded-lg" alt="Image 2">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Enterprise design tips</a>
+                </h2>
+                <p class="mb-4  text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 12 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png" class="mb-5 rounded-lg" alt="Image 3">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">We partnered with Google</a>
+                </h2>
+                <p class="mb-4  text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 8 minutes
+                </a>
+            </article>
+            <article class="max-w-xs">
+                <a href="#">
+                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mb-5 rounded-lg" alt="Image 4">
+                </a>
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                    <a href="#">Our first project with React</a>
+                </h2>
+                <p class="mb-4  text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    Read in 4 minutes
+                </a>
+            </article>
+        </div>
+    </div>
+  </aside>
+
+
+  <!-- Footer -->
+  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <a href="#" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
+            Jason DiPopolo    
+        </a>
+        <p class="my-6 text-gray-500 dark:text-gray-400">Designing experiences for the web.</p>
+        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Works</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6 ">Blog</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+            </li>
+            <!-- <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
+            </li> -->
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2024 <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights Reserved</span>
+    </div>
+  </footer>
+  
+    <!-- Flowbite CDN (End of Body) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html>
