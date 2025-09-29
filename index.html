@@ -32,54 +32,92 @@
     <!-- Imported Web Components -->
   <script defer src="NavBar.js"></script>
 
+    <!-- Hero radial overlay styles + subtle animated background -->
+    <style>
+      /* hero overlay sits above the background gradient but behind content */
+      .hero-bg { position: relative; 
+        /* make the CSS gradient move subtly by animating background-position */
+        background-position: 20% 50%;
+        background-size: 200% 200%;
+        animation: gradientShift 18s ease-in-out infinite;
+      }
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.10), transparent 50%);
+        mix-blend-mode: overlay;
+        z-index: 0;
+      }
+      /* make sure hero content sits above the overlay */
+      .hero-bg > * { position: relative; z-index: 1; }
+
+      /* darker, subtler overlay in dark mode */
+      @media (prefers-color-scheme: dark) {
+        .hero-bg::before {
+          background-image: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.03), transparent 50%);
+          mix-blend-mode: screen;
+        }
+      }
+
+      /* Keyframes for a gentle left-right shift of the gradient */
+      @keyframes gradientShift {
+        0% { background-position: 20% 50%; }
+        50% { background-position: 80% 50%; }
+        100% { background-position: 20% 50%; }
+      }
+
+      /* Animated gradient button */
+      .btn-animated {
+        background: linear-gradient(90deg,#10b981 0%,#06b6d4 50%,#3b82f6 100%);
+        color: white;
+        background-size: 200% 200%;
+        animation: btnGradient 6s linear infinite;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn-animated:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(16,185,129,0.12);
+      }
+      @keyframes btnGradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      /* Metrics card styling for subtle emphasis and separation */
+      .metrics-card {
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        background-color: rgba(255,255,255,0.9);
+        box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+        border: 1px solid rgba(15,23,42,0.04);
+      }
+      @media (prefers-color-scheme: dark) {
+        .metrics-card {
+          background-color: rgba(17,24,39,0.6);
+          border-color: rgba(255,255,255,0.04);
+          box-shadow: none;
+        }
+      }
+
+      /* Respect users who prefer reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .hero-bg { animation: none !important; }
+        .btn-animated { animation: none !important; }
+      }
+    </style>
+
 </head>
 <body class="">
 
 <!-- Navbar Web Component -->
 <!-- <nav-bar></nav-bar> -->
     
-<!-- Navbar -->
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <!-- <li>
-            <a href="/index.html" class="block py-2 px-3 text-black bg-emerald-700 rounded md:bg-transparent md:text-emerald-700 md:p-0 dark:text-white md:dark:text-emerald-500" aria-current="page">Home</a>
-          </li> -->
-          <li>
-            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-white md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Works</a>
-          </li>
-          <!-- <li>
-            <a href="/blog.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-white md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
-          </li> -->
-          <li>
-            <a href="/contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-white md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-          <!-- <li>
-            <a href="/buildyourwebsite.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-white md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Build Your Website</a>
-          </li> -->
-          <!-- <li>
-            <a href="/careercoaching.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-white md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Career Coaching</a>
-          </li> -->
-          <!-- <li>
-            <a href="/careercoaching.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-white md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Assets</a>
-          </li> -->
-          <!-- <li>
-            <a href="/careercoaching.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-emerald-700 md:p-0 dark:text-white md:dark:hover:text-emerald-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Book</a>
-          </li> -->
-        </ul>
-      </div>
-    </div>
-  </nav>
+
   
   <!-- Hero -->
   <!-- <section class="bg-white dark:bg-gray-900">
@@ -87,7 +125,7 @@
         <div class="mr-auto place-self-center lg:col-span-7">
             <h1 class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Product Designer</h1>
             <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 sm:text-xl dark:text-gray-400">Designing experiences for the web.</p>
-            <a href="/contact.html" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-emerald-300 hover:bg-emerald-500 focus:ring-4 focus:ring-emerald-300 dark:focus:ring-emerald-900">
+            <a href="/contact.html" class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-teal-300 hover:bg-teal-500 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-900">
                 Let's Have a Conversation
                 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </a>
@@ -102,92 +140,110 @@
 </section> -->
 
 <!-- Hero -->
-<section class="bg-white dark:bg-gray-900">
-  <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+<section class="hero-bg bg-gradient-to-br from-sky-500 via-blue-100 to-white dark:from-sky-900 dark:via-sky-800 dark:to-gray-900 h-screen flex flex-col">
+
+  <!-- Navbar -->
+<nav class="">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+          <!-- <li>
+            <a href="/index.html" class="block py-2 px-3 text-black bg-teal-700 rounded md:bg-transparent md:text-teal-700 md:p-0 dark:text-white md:dark:text-teal-500" aria-current="page">Home</a>
+          </li> -->
+          <li>
+            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Explore My Work</a>
+          </li>
+          <!-- <li>
+            <a href="/blog.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li> -->
+          <li>
+            <a href="/contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Me</a>
+          </li>
+          <!-- <li>
+            <a href="/buildyourwebsite.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Build Your Website</a>
+          </li> -->
+          <!-- <li>
+            <a href="/careercoaching.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Career Coaching</a>
+          </li> -->
+          <!-- <li>
+            <a href="/careercoaching.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Assets</a>
+          </li> -->
+          <!-- <li>
+            <a href="/careercoaching.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Book</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  
+<!-- Hero Content -->
+  <div class="flex-grow flex items-center justify-center px-4 py-8">
+    <div class="grid max-w-screen-xl lg:gap-8 xl:gap-0 lg:grid-cols-12">
       <div class="mr-auto place-self-center lg:col-span-7">
-          <div class="mb-8 lg:hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img class="rounded-lg shadow-lg" src="images/hero-image-me-mobile.avif" alt="mockup light">
-          </div>  
-          <h1 class="max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl xl:text-6xl dark:text-white">NJ-Based Product Designer Specializing in Govt Contracts & Startups</h1>
-          <p class="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-10 md:text-lg lg:text-xl dark:text-gray-400">Working with clients like the <span class="font-medium text-black dark:text-white">US Dept of Defense</span>, Presidential Candidate <span class="font-medium text-black dark:text-white">Andrew Yang</span>, and plenty of startups.</p>
-          <div class="items-center justify-between p-4 mb-4 space-y-4 bg-gray-100 rounded dark:bg-gray-700 sm:flex sm:space-y-0">
-              <div>
-                  <div class="text-2xl font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400"><a href="mailto:jasondipopolo@pm.me">Contact</a></div>
-                  <div class="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
-                    <span id="email-text">jasondipopolo@pm.me</span>
-                    <button onclick="copyEmail()" class="text-emerald-600 hover:text-emerald-800" title="Copy email">
-                      <span class="material-symbols-outlined text-base">
-                        content_copy
-                        </span>
-                    </button>
-                  </div>
-              </div>
-              <div>
-                  <div class="text-2xl font-bold text-emerald-600 hover:text-emerald-700 dark:text-emerald-400"><a href="https://www.linkedin.com/in/jasondipopolo/">Connect</a></div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">on LinkedIn</div>
-              </div>
-              <!-- <div>
-                  <div class="text-2xl font-bold text-gray-900 dark:text-white">Resume/CV</div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">For windows 7 or later</div>
-              </div> -->
-              <a href="Jason DiPopolo's Resume_CV.pdf" class="inline-flex items-center justify-center w-full px-5 py-3 text-base font-medium text-center text-white rounded-lg sm:w-auto bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:ring-emerald-300 dark:focus:ring-emerald-900" download>
-                  <svg class="w-5 h-5 mr-2 -ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                  Download Resume/CV
-              </a>
-          </div>
-          <div class="text-sm text-gray-500">Available for remote projects and on-site roles in NJ and NYC</div>
+        <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+          I design products that drive real impact
+        </h1>
+        <p class="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+          4 years designing for enterprise, startup, and government. I simplify complexity to improve usability, retention, and accessibility.
+        </p>
+        <a href="/#works" class="inline-flex btn-animated items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center rounded-lg shadow-sm hover:brightness-105 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-900" aria-label="Explore my work">
+          Explore My Work
+        </a>
+        <a href="/Jason DiPopolo's Resume_CV.pdf" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+          Download Resume/CV
+        </a> 
       </div>
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img class="rounded-lg shadow-lg dark:hidden hover:shadow-xl transition delay-150 duration-300 ease-in-out" src="images/hero-image-me.avif" alt="mockup light">
-          <img class="rounded-lg shadow-lg hover:shadow-xl transition delay-150 duration-300 ease-in-out hidden dark:block" src="images/hero-image-me.avif" alt="mockup dark">
-      </div>                
+        <img class="rounded-lg shadow-lg" src="images/hero-image-me-mobile.avif" alt="mockup light">
+      </div>
+    </div>
   </div>
-  
 </section>
 
-<!-- Social Proof -->
-<section class="bg-emerald-300 dark:bg-gray-900">
-    <div class="items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-16 lg:px-6">
-        <div class="col-span-2 mb-8">
-            <p class="text-black dark:text-white text-lg font-medium">Jason “instills confidence and reliability”</p>
-            <h2 class="mt-3 mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">Trusted to design for a 500k+ user base</h2>
-            <p class="text-gray-700 sm:text-xl dark:text-gray-400">Those who work with Jason have said he's positive, innovative, proactive, a team player, mindful, leaves his ego at the door, a consistent volunteer, and a design leader.</p>
-            <div class="pt-6 mt-6 space-y-4 border-t border-gray-700 dark:border-gray-700">
-                <div>
-                  <a href="/#works" class="text-black dark:text-white inline-flex items-center text-base font-medium text-gray-700 hover:text-emerald-800 dark:text-emerald-500 dark:hover:text-emerald-700">
-                    Explore my work
-                    <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                  </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
-            <div>
-                <span class="text-black dark:text-white material-symbols-outlined" style="font-size: 3.5rem;">self_improvement</span>
-                <h3 class="mb-2 text-2xl font-bold dark:text-white">70% Boost in Usability</h3>
-                <p class="font-normal text-gray-700 dark:text-gray-400 sm:text-lg">based on before and after usability test scores</p>
-            </div>
-            <div>
-                <span class="text-black dark:text-white material-symbols-outlined" style="font-size: 3.5rem;">devices</span>
-                <h3 class="mb-2 text-2xl font-bold dark:text-white">16+ SaaS Products in Production</h3>
-                <p class="font-normal text-gray-700 dark:text-gray-400 sm:text-lg">designed by Jason</p>
-            </div>
-            <div>
-                <span class="text-black dark:text-white material-symbols-outlined" style="font-size: 3.5rem;">connect_without_contact</span>
-                <h3 class="mb-2 text-2xl font-bold dark:text-white">3+ Years Experience</h3>
-                <p class="font-normal text-gray-700 dark:text-gray-400 sm:text-lg">in Product Design for SaaS</p>
-            </div>
-            <div>
-                <span class="text-black dark:text-white material-symbols-outlined" style="font-size: 3.5rem;">accessible</span>
-                <h3 class="mb-2 text-2xl font-bold dark:text-white">5 Accessibility Issues</h3>
-                <p class="font-normal text-gray-700 dark:text-gray-400 sm:text-lg">Found for every 1 work item worked on</p>
-            </div>
-        </div>
+<!-- Impactful Metrics (refined) -->
+<section class="">
+  <div class="px-4 py-12 mx-auto max-w-screen-xl sm:py-20 lg:px-6">
+    <div class="mx-auto max-w-screen-md text-center mb-10">
+      <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 md:text-4xl dark:text-white">Impactful Metrics</h2>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Real outcomes from real projects—clear, measurable results that demonstrate impact.</p>
     </div>
-  </section>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="metrics-card text-center">
+        <div class="text-teal-600 dark:text-teal-400 text-4xl md:text-5xl font-extrabold">70%</div>
+        <div class="mt-3 text-xl font-semibold text-gray-900 dark:text-white">Average boost in usability</div>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Pre → post usability testing</p>
+      </div>
+
+      <div class="metrics-card text-center">
+        <div class="text-sky-600 dark:text-sky-400 text-4xl md:text-5xl font-extrabold">4+</div>
+        <div class="mt-3 text-xl font-semibold text-gray-900 dark:text-white">Years experience</div>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">in product / UX / UI design</p>
+      </div>
+
+      <div class="metrics-card text-center">
+        <div class="text-violet-600 dark:text-violet-400 text-4xl md:text-5xl font-extrabold">5</div>
+        <div class="mt-3 text-xl font-semibold text-gray-900 dark:text-white">Accessibility issues</div>
+        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Spotted and resolved per work item</p>
+      </div>
+    </div>
+
+    <p class="mt-8 text-sm text-center text-gray-500 dark:text-gray-400">Results based on a collected dataset over 5 consecutive 2-week sprints across multiple projects.</p>
+  </div>
+</section>
 
   <!-- Works -->
-    <div class="bg-white dark:bg-gray-900 mx-auto text-center py-24">
+<section class="bg-gradient-to-b from-white to-sky-200 dark:from-gray-900 dark:to-gray-800">
+    <div class="mx-auto text-center py-24">
       <h2 id="works" class="text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
         Works
       </h2>
@@ -196,9 +252,9 @@
       </p>
     </div>
 
-  <section class="bg-white dark:bg-gray-900 pb-16">
+  <section class="pb-16">
     <div class="px-4 mx-auto max-w-6xl">
-        <h2 class="mb-5 text-xl font-semibold leading-tight text-gray-900 md:text-2xl dark:text-white"><a class="hover:text-emerald-600" href="works/enterpriseAppNavigation.html">400+ Pages. Zero Clarity. One Research Study That Changed Everything</a></h2>
+        <h2 class="mb-5 text-xl font-semibold leading-tight text-gray-900 md:text-2xl dark:text-white"><a class="hover:text-teal-600" href="works/enterpriseAppNavigation.html">From 400+ Pages of Confusion to a Navigation That Actually Works</a></h2>
         <div class="grid gap-4 mb-4 sm:grid-cols-3 sm:gap-6 md:gap-12 sm:mb-5">
             <!-- Column -->
             <div class="sm:col-span-2">
@@ -225,7 +281,7 @@
         </div>
         <div class="flex items-center space-x-4">
           <a href="works/enterpriseAppNavigation.html">
-          <button type="button" class="text-white inline-flex items-center bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">
+          <button type="button" class="text-white inline-flex items-center bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
               View Case Study
           </button>
           </a>               
@@ -235,9 +291,9 @@
   </section>
 
 
-  <section class="bg-white dark:bg-gray-900 pb-16">
+  <section class="pb-16">
     <div class="px-4 mx-auto max-w-6xl">
-        <h2 class="mb-5 text-xl font-semibold leading-tight text-gray-900 md:text-2xl dark:text-white"><a class="hover:text-emerald-600" href="works/mappingForCertifications.html">No One Knew What We Were Building — I Mapped It, Unblocked It, We Shipped It
+        <h2 class="mb-5 text-xl font-semibold leading-tight text-gray-900 md:text-2xl dark:text-white"><a class="hover:text-teal-600" href="works/mappingForCertifications.html">No One Knew What We Were Building So I Mapped It, Unblocked It, and We Shipped It
         </a></h2>
         <div class="grid gap-4 mb-4 sm:grid-cols-3 sm:gap-6 md:gap-12 sm:mb-5">
             <!-- Column -->
@@ -265,7 +321,7 @@
         </div>
         <div class="flex items-center space-x-4">
           <a href="works/mappingForCertifications.html">
-          <button type="button" class="text-white inline-flex items-center bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">
+          <button type="button" class="text-white inline-flex items-center bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
               View Case Study
           </button>
           </a>               
@@ -274,38 +330,9 @@
       </div>
   </section>
 
-            <!-- Column --------------------------------- -->
-            <!-- <div>
-                <dl>
-                    <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Team</dt>
-                    <dd class="mb-1 text-gray-500 dark:text-gray-400 sm:mb-1">Product Designer (Jason)</dd>
-                    <dd class="mb-1 text-gray-500 dark:text-gray-400 sm:mb-1">Project Manager</dd>
-                    <dd class="mb-4 text-gray-500 dark:text-gray-400 sm:mb-5">6-Person Dev Team</dd>
-                    <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Project Duration</dt>
-                    <dd class="mb-4 text-gray-500 dark:text-gray-400 sm:mb-5">1 mo</dd>
-                    <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Client</dt>
-                    <dd class="mb-4 text-gray-500 dark:text-gray-400 sm:mb-5">Dept of Defense</dd>
-                    <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Users</dt>
-                    <dd class="mb-4 text-gray-500 dark:text-gray-400 sm:mb-5">Dept of Defense Personnel</dd>
-                    <dt class="mb-2 font-semibold leading-none text-gray-900 dark:text-white">Platform</dt>
-                    <dd class="text-gray-500 dark:text-gray-400">Web (Desktop & Mobile)</dd>
-                </dl>
-            </div>
-        </div>
-        <div class="flex items-center space-x-4">
-          <a href="works/skillcertifications.html">
-          <button type="button" class="text-white inline-flex items-center bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">
-              View Case Study
-          </button>
-          </a>               
-      </div>
-    </div>
-      </div>
-  </section> -->
-
-  <section class="bg-white dark:bg-gray-900">
+  <section class="">
     <div class="py-8 px-4 mx-auto max-w-6xl lg:py-16">
-        <h2 class="mb-5 text-xl font-semibold leading-none text-gray-900 md:text-2xl dark:text-white"><a class="hover:text-emerald-600" href="works/resumeBuilder.html">This Resume Builder Took Users 2 Minutes to Preview Each Change, I Made It Instant</a></h2>
+        <h2 class="mb-5 text-xl font-semibold leading-none text-gray-900 md:text-2xl dark:text-white"><a class="hover:text-teal-600" href="works/resumeBuilder.html">This Resume Builder Took Users 2 Minutes to Preview Each Change, I Made It Instant</a></h2>
         <div class="grid gap-4 mb-4 sm:grid-cols-3 sm:gap-6 md:gap-12 sm:mb-5">
             <!-- Column -->
             <div class="sm:col-span-2">
@@ -331,7 +358,7 @@
         </div>
         <div class="flex items-center space-x-4">
           <a href="works/resumeBuilder.html">
-          <button type="button" class="text-white inline-flex items-center bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">
+          <button type="button" class="text-white inline-flex items-center bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
               View Case Study
           </button>
           </a>               
@@ -341,7 +368,7 @@
   </section>
 
 <!-- Code Projects -->  
-      <section class="bg-white dark:bg-gray-900 antialiased">
+      <section class="">
         <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
           <div class="max-w-2xl mx-auto text-center">
             <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 sm:text-4xl dark:text-white">
@@ -354,130 +381,6 @@
       
           <div class="grid grid-cols-1 gap-12 mt-8 sm:gap-8 lg:gap-16 sm:grid-cols-2 lg:grid-cols-3">
 
-          <!-- Work No. 1 -->
-            <!-- <div>
-              <img class="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6" src="/images/CardSort-FeaturedImg.png"
-                alt="Featured Image for Navigation UX Study">
-              <img class="object-cover w-full rounded-lg shadow-lg hidden dark:block mb-6" src="/images/CardSort-FeaturedImg.png"
-                alt="Featured Image for Navigation UX Study">
-              <div class="space-y-3 mb-6">
-                <span
-                  class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                  <span class="pr-2 material-symbols-outlined">diversity_1</span>
-                  UX
-                </span>
-                <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="works/enterpriseAppNavigation.html" class="hover:underline">Massive UX Navigation Issue</a>
-                </h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                  In-depth card sorting sessions with our users swing our navigation's grouping, labels, and overall user comprehension in a powerful, new direction.
-                </p>
-              </div>
-              <div class="flex items-center gap-4">
-                <a href="works/enterpriseAppNavigation.html" title=""
-                  class="text-black dark:text-black bg-emerald-300 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
-                  role="button">
-                  Case study
-                </a>
-      
-                <a href="https://www.figma.com/file/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?type=design&node-id=133-2&mode=design" title=""
-                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  role="button">
-                  <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                      d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                  </svg>
-                  Live preview
-                </a>
-              </div>
-            </div> -->
-            
-            <!-- Work No. 2 -->
-            <!-- <div>
-              <img class="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6" src="/images/resumeBuilderRedesign-FeaturedImg.png"
-                alt="Featured Image for Reusme Builder Redesign">
-              <img class="object-cover w-full rounded-lg shadow-lg mb-6 dark:block hidden" src="/images/resumeBuilderRedesign-FeaturedImg.png"
-                alt="Featured Image for Reusme Builder Redesign">
-              <div class="space-y-3 mb-6">
-                <span
-                  class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                  <span class="pr-2 material-symbols-outlined">draw</span>
-                  </svg>
-                  UI
-                </span>
-                <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="/works/resumeBuilder.html" class="hover:underline">Resume Builder Redesign</a>
-                </h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Sloppy, non-intuitive layout is revamped into an easy-to-use product via UI and visual design best practices.
-                </p>
-              </div>
-              <div class="flex items-center gap-4">
-                <a href="/works/resumeBuilder.html" title=""
-                  class="text-black dark:text-black bg-emerald-300 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
-                  role="button">
-                  Case study
-                </a>
-      
-                <a href="https://www.figma.com/file/GbKFpbYG3U32bbpIO7wMIJ/Resume-Builder-Redesign?type=design&node-id=0%3A1&mode=design&t=o3R8MrN5f1kQk2y8-1" title=""
-                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  role="button">
-                  <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                      d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                  </svg>
-                  Live preview
-                </a>
-              </div>
-            </div> -->
-
-            <!-- Work No. 3 -->
-            <!-- <div>
-              <img class="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/landing-page-ngo.jpg"
-                alt="">
-              <img class="object-cover w-full rounded-lg shadow-lg mb-6 dark:block hidden" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/landing-page-ngo-dark.jpg"
-                alt="">
-              <div class="space-y-3 mb-6">
-                <span
-                  class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                  <span class="pr-2 material-symbols-outlined">diversity_1</span>
-                  UX
-                </span>
-                <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                  <span class="pr-2 material-symbols-outlined">draw</span>
-                  UI 
-                </span>
-                <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="works/skillcertifications.html" class="hover:underline">Users Wanted Certifications for Their Resumes</a>
-                </h3>
-                <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Taking an ancient approval chain process to the web. Product and development teams clash and need mapping facilitated to reach agreement.
-                </p>
-              </div>
-              <div class="flex items-center gap-4">
-                <a href="works/skillcertifications.html" title=""
-                  class="text-black dark:text-black bg-emerald-300 hover:bg-emerald-500 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
-                  role="button">
-                  Case study
-                </a>
-      
-                <a href="#" title=""
-                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  role="button">
-                  <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                      d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                  </svg>
-                  Live Preview
-                </a>
-              </div>
-            </div> -->
 
             <!-- Work No. 4 -->
             <div>
@@ -506,13 +409,13 @@
               </div>
               <div class="flex items-center gap-4">
                 <a href="works/halfway.html">
-                  <button type="button" class="text-white inline-flex items-center bg-emerald-700 hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800">
+                  <button type="button" class="text-white inline-flex items-center bg-teal-700 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">
                       View Case Study
                   </button>
                   </a> 
       
                 <a target="_blank" href="https://halfwaylowfidelity.netlify.app/" title=""
-                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-teal-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                   role="button">
                   <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                     fill="currentColor">
@@ -559,13 +462,13 @@
               </div>
               <div class="flex items-center gap-4">
                 <a href="https://github.com/grammarOfOrnament/grida" title=""
-                  class="text-white dark:text-white bg-emerald-700  hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
+                  class="text-white dark:text-white bg-teal-700  hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
                   role="button">
                   View GitHub
                 </a>
       
                 <a href="https://grideyes.app/" title=""
-                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-teal-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                   role="button">
                   <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                     fill="currentColor">
@@ -579,55 +482,16 @@
             </div>
       
       
-            <!-- Work No. 6 -->
-            <!-- <div>
-              <img class="object-cover w-full rounded-lg shadow-lg dark:hidden mb-6" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/mail-management-system.jpg"
-                alt="">
-              <img class="object-cover w-full rounded-lg shadow-lg dark:block hidden mb-6" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/mail-management-system-dark.jpg"
-                alt="">
-              <div class="space-y-3 mb-6">
-                <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                  <span class="pr-2 material-symbols-outlined">diversity_1</span>
-                  UX 
-                </span>
-                <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                  <span class="pr-2 material-symbols-outlined">draw</span>
-                  UI 
-                </span>
-                <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
-                  <a href="#" class="hover:underline">SMY Calculator</a>
-                </h3>
-                <p class="text-lg font-normal text-gray-500 dark:text-gray-400">
-                  Complex customer ask had our company stumped at a standstill for years until user interviews followed by iterative design swiftly unstuck us.
-                </p>
-              </div>
-              <div class="flex items-center gap-4">
-                <a href="#" title=""
-                  class="text-black dark:text-white bg-emerald-700  hover:bg-emerald-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
-                  role="button">
-                  Case study
-                </a>
-      
-                <a href="#" title=""
-                  class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg shrink-0 focus:outline-none hover:bg-gray-100 hover:text-emerald-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  role="button">
-                  <svg aria-hidden="true" class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                      d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                  </svg>
-                  Live preview
-                </a>
-              </div>
-            </div> -->
+           
           </div>
         </div>
       </section>
 
+  </section>
+
 
   <!-- Testimonials -->
-  <section class="bg-emerald-300 dark:bg-gray-900">
+  <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-md text-center">
             <h2 class="mb-4 text-3xl tracking-tight font-bold text-gray-900 dark:text-white">Testimonials</h2>
@@ -738,94 +602,7 @@
     </div>
   </section>
 
-  <!-- "What you showed blew me away. Years ago this process used to be so complicated, but I look at what you and your team built and I'm thinking 'I could do that. I could use that system.' It's like the future of the Air Force is here." -->
-
-  <!-- Featured Blog Posts -->
-  <!-- <section class="bg-white dark:bg-gray-900">
-    <div class="px-4 mx-auto max-w-screen-xl py-24 lg:px-6">
-        <div class="mx-auto max-w-screen-sm text-center mb-8">
-            <h2 class="mb-4 text-3xl lg:text-3xl tracking-tight font-bold text-gray-900 dark:text-white">Blog</h2>
-            <p class="font-normal text-gray-500 text-xl dark:text-gray-400">Because there's nothing more powerful than thinking for yourself.</p>
-        </div> 
-        <div class="grid gap-8 lg:grid-cols-2">
-            <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <div class="flex justify-between items-center mb-5 text-gray-500">
-                    <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                    <span class="text-emerald-300 material-symbols-outlined" style="font-size: 1rem; padding-right: 4px;">import_contacts</span>
-                        Book Overview
-                    </span>
-                    <span class="text-sm">Sep 2020</span>
-                </div>
-                <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="/blogPosts/article-talkingtohumans.html">Talking to Humans</a></h3>
-                <p class="mb-5 text-gray-500 dark:text-gray-400">The top practices today in customer discovery for lean startup business models are covered in Giff Constable’s Talking to Humans. I wanted share what I learned in my time reading it.</p>
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center space-x-4">
-                        <img class="w-7 h-7 rounded-full" src="/images/me-business.jpg" alt="Author avatar" />
-                        <span class="font-medium dark:text-white">
-                            Jason DiPopolo
-                        </span>
-                    </div>
-                    <a href="/blogPosts/article-talkingtohumans.html" class="inline-flex items-center font-medium text-emerald-600 dark:text-white dark:text-emerald-500 hover:underline">
-                        Read more
-                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </a>
-                </div>
-            </article> 
-            <article class="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                <div class="flex justify-between items-center mb-5 text-gray-500">
-                  <span class="bg-slate-100 text-slate-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">
-                    <span class="text-emerald-300 material-symbols-outlined" style="font-size: 1rem; padding-right: 4px;">edit_note</span>
-                        Article
-                    </span>
-                    <span class="text-sm">Oct 2023</span>
-                </div>
-                <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><a href="/blogPosts/article-letgo.html">Embracing Uncertainty, Letting Go, and Taking Action</a></h3>
-                <p class="mb-5 text-gray-500 dark:text-gray-400">In the information age, it has become too easy to overfixate on numbers and certainty before taking action. It seems healthy enough. Why embrace uncertainty? Certainty can take away your freedom.</p>
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center space-x-4">
-                        <img class="w-7 h-7 rounded-full" src="/images/me-business.jpg" alt="Author avatar" />
-                        <span class="font-medium dark:text-white">
-                            Jason DiPopolo
-                        </span>
-                    </div>
-                    <a href="/blogPosts/article-letgo.html" class="inline-flex items-center font-medium text-emerald-600 dark:text-white dark:text-emerald-500 hover:underline">
-                        Read more
-                        <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </a>
-                </div>
-            </article>                  
-        </div>  
-    </div>
-  </section> -->
-
-  <!-- About -->
-  <!-- <section class="bg-white dark:bg-gray-900">
-    <div class="py-24 px-4 mx-auto max-w-screen-xl lg:px-6">
-        <div class="mx-auto max-w-screen-sm text-center mb-8">
-            <h2 class="mb-4 text-3xl lg:text-3xl tracking-tight font-bold text-gray-900 dark:text-white">About Jason</h2>
-            <p class="text-gray-500 text-normal text-xl dark:text-gray-400">Less about work and more about who Jason is personally.</p>
-        </div> 
-<div class="flex flex-col items-center gap-5 pr-5 border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xxl dark:border-gray-700 dark:bg-gray-800">
-    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="/images/0V2A5472 - Copy_upscale.jpg" alt="Jason profile picture">
-    <div class="flex flex-col justify-between p-4 leading-normal"> -->
-        <!-- <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">UX/UI, Dev, Questioner</h5> -->
-        <!-- <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Hi, I'm Jason. While I'm a fanatic about design, I'll use this section to round out who I am beyond design. Philosophy, Christianity, and questions about what's truly valuable are paramount to my way of seeing the world. In philosophical thought, my most cherished findings have been: Loving people matters more than proving you're right to them, Planning is good, but execution is better, be stubborn on vision and flexible on details, and never stop seeking humility, gentleness, and lowliness no matter your position.</p> -->
-        <!-- <ul class="max-w-xl space-y-1 text-gray-500 list-disc list-outside dark:text-gray-400 pl-5">
-          <li>
-            Loving people matters more than proving you're right to them.
-          </li>
-          <li>
-            Planning is good, but execution is better.
-          </li>
-          <li>
-            The more need for certainty you can let go of, the more free you are.
-          </li>
-        </ul> -->
-    <!-- </div>
-  </div> -->
- 
-    <!-- </div>
-  </section> -->
+  <!-- About Me -->
 
   <section class="bg-white dark:bg-gray-900 py-24">
     <div class="grid gap-16 py-8 px-4 mx-auto max-w-screen-xl lg:grid-cols-2 lg:py-16 lg:px-6">
@@ -860,7 +637,7 @@
         <p class="my-6 text-gray-500 dark:text-gray-400">Product Designer</p>
         <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
             <li>
-                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Works</a>
+                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Explore My Works</a>
             </li>
             <!-- <li>
               <a href="/blog.html" class="mr-4 hover:underline md:mr-6 ">Blog</a>
