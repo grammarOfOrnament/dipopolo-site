@@ -166,7 +166,7 @@
             <a href="/blog.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
           </li> -->
           <li>
-            <a href="/contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Me</a>
+            <a href="/#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Me</a>
           </li>
           <!-- <li>
             <a href="/buildyourwebsite.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-700 md:p-0 dark:text-white md:dark:hover:text-teal-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Build Your Website</a>
@@ -629,44 +629,51 @@
   </section>
 
 <!-- Footer -->
-  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+<section id="contact" class="hero-bg bg-gradient-to-br from-sky-500 via-blue-100 to-white dark:from-sky-900 dark:via-sky-800 dark:to-gray-900 flex flex-col pt-24">
+
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Let's Work Together</h2>
+      <p class="mt-3 text-lg text-gray-600 dark:text-gray-300">Let's talk about how I can bring value to your team.</p>
+
+      <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <button onclick="copyEmail()" class="inline-flex btn-animated items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center rounded-lg shadow-sm hover:brightness-105 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-900" aria-label="Explore my work" aria-label="Copy email">
+          <span class="material-symbols-outlined me-2">
+            content_copy
+          </span> 
+          jasondipopolo@pm.me
+        </button>
+        <a target="_blank" href="https://www.linkedin.com/in/jasondipopolo/" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" aria-label="LinkedIn">
+          LinkedIn
+        </a>
+        <a href="/Jason DiPopolo's Resume_CV.pdf" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" aria-label="Download resume">
+          Download Resume / CV
+        </a>
+      </div>
+
+      <div class="mt-6 text-gray-600 dark:text-gray-300 flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined">
+location_on
+</span>
+        <span>Available for remote, hybrid, or on-site (NJ / NYC)</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="p-4 md:p-8 lg:p-10">
     <div class="mx-auto max-w-screen-xl text-center py-24">
         <a href="/index.html" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
             Jason DiPopolo    
         </a>
         <p class="my-6 text-gray-500 dark:text-gray-400">Product Designer</p>
-        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
-            <li>
-                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Explore My Works</a>
-            </li>
-            <!-- <li>
-              <a href="/blog.html" class="mr-4 hover:underline md:mr-6 ">Blog</a>
-          </li> -->
-          <li>
-            <a href="/contact.html" class="mr-4 hover:underline md:mr-6 ">Contact</a>
-        </li>
-            <!-- <li>
-                <a href="/buildyourwebsite.html" class="mr-4 hover:underline md:mr-6 ">Build Your Website</a>
-            </li> -->
-            <!-- <li>
-                <a href="/careercoaching.html" class="mr-4 hover:underline md:mr-6">Career Coaching</a>
-            </li> -->
-            <!-- <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
-            </li>
-            <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
-            </li>
-            <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
-            </li> -->
-        </ul>
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2025 <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights Reserved</span>
     </div>
   </footer>
 
 
-  <div id="toast-success" class="hidden flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800 fixed bottom-4 right-4 z-50" role="alert">
+  <div id="toast-success" aria-live="polite" class="hidden flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow-sm dark:text-gray-400 dark:bg-gray-800 fixed bottom-4 right-4 z-50" role="alert">
       <div class="inline-flex items-center justify-center shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
               <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
@@ -682,25 +689,49 @@
       </button>
   </div>
 
+  </section>
+
   
 <!-- Copy to Clipboard (Email Address) -->
 <script>
   function copyEmail() {
-    const email = document.getElementById("email-text").innerText;
-    navigator.clipboard.writeText(email).then(() => {
-      const toast = document.getElementById("toast-success");
-      toast.classList.remove("hidden");
-      
-      // Auto-hide after 3 seconds
-      setTimeout(() => {
-        toast.classList.add("hidden");
-      }, 3000);
-    });
+    const email = 'jasondipopolo@pm.me';
+
+    function showToast() {
+      const toast = document.getElementById('toast-success');
+      if (!toast) return;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 3000);
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast();
+      } catch (err) {
+        // Last resort: show the email in a prompt so user can copy
+        window.prompt('Copy email address', text);
+      }
+      document.body.removeChild(ta);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(showToast).catch(() => fallbackCopy(email));
+    } else {
+      fallbackCopy(email);
+    }
   }
 
   // Optional: Close button
   document.querySelector('[data-dismiss-target="#toast-success"]').addEventListener('click', function () {
-    document.getElementById("toast-success").classList.add("hidden");
+    document.getElementById('toast-success').classList.add('hidden');
   });
 </script>
   
