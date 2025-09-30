@@ -111,6 +111,14 @@
       }
     </style>
 
+    <!-- Smooth scrolling for in-page anchors (respect reduced motion) -->
+    <style>
+      html { scroll-behavior: smooth; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+      }
+    </style>
+
 </head>
 <body class="">
 
@@ -214,7 +222,7 @@
   <div class="px-4 py-12 mx-auto max-w-screen-xl sm:py-20 lg:px-6">
     <div class="mx-auto max-w-screen-md text-center mb-10">
       <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 md:text-4xl dark:text-white">Impactful Metrics</h2>
-      <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Real outcomes from real projects—clear, measurable results that demonstrate impact.</p>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">Every statistic below reflects real project outcomes I've delivered</p>
     </div>
 
     <div class="grid gap-6 md:grid-cols-3">
@@ -735,6 +743,47 @@ location_on
   });
 </script>
   
+
+    <!-- Smooth-scroll JS fallback: animate in-page anchor jumps and respect reduced-motion -->
+    <script>
+      (function () {
+        if ('scrollBehavior' in document.documentElement.style) return; // browser supports CSS smooth scrolling
+
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) return;
+
+        function offsetTop(el) {
+          const rect = el.getBoundingClientRect();
+          return rect.top + window.pageYOffset;
+        }
+
+        document.addEventListener('click', function (e) {
+          const a = e.target.closest('a[href^="#"]');
+          if (!a) return;
+          const hash = a.getAttribute('href');
+          if (!hash || hash === '#') return;
+          const target = document.querySelector(hash);
+          if (!target) return;
+          e.preventDefault();
+
+          const start = window.pageYOffset;
+          const end = Math.max(0, offsetTop(target));
+          const duration = 500;
+          let startTime = null;
+
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            const elapsed = ts - startTime;
+            const t = Math.min(1, elapsed / duration);
+            const eased = t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t; // easeInOutQuad
+            window.scrollTo(0, Math.round(start + (end - start) * eased));
+            if (elapsed < duration) requestAnimationFrame(step);
+          }
+
+          requestAnimationFrame(step);
+        }, { passive: false });
+      })();
+    </script>
 
     <!-- Flowbite CDN (End of Body) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
