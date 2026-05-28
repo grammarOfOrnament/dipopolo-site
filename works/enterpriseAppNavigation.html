@@ -1,95 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jason DiPopolo</title>
 
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css" />
+
     <!-- Flowbite CDN (Head) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"  rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Google Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-    <link rel="icon" type="image/x-icon" href="/logos/icon-me.png">
-
-
-</head>
-<body class="bg-white dark:bg-gray-900">
-    
-<!-- Navbar -->
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <link rel="icon" type="image/x-icon" href="/logos/icon-me.png" />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="/index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Jason DiPopolo</span>
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Jason DiPopolo</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
           <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
           </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <!-- <li>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <!-- <li>
             <a href="/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
           </li> -->
-          <li>
-            <a href="/#works" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Explore My Work</a>
-          </li>
-          <!-- <li>
+            <li>
+              <a
+                href="/#works"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Explore My Work</a
+              >
+            </li>
+            <!-- <li>
             <a href="/about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
           </li> -->
-          <!-- <li>
+            <!-- <li>
             <a href="/blog.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
           </li> -->
-          <li>
-            <a href="/contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact Me</a>
-          </li>
-        </ul>
+            <li>
+              <a
+                href="/contact.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-<!-- Hero -->
-<section class="bg-white dark:bg-gray-900">
-  <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-    <div class="text-center">      
-      <h1 class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white tracking-tight pb-2">400+ Pages. Zero Clarity. One Research Study That Changed Everything</h1>
-      <p class="mb-4 text-base font-normal text-gray-500 pb-4">To abide by a non-disclosure agreement, company, client, and product identities have been obscured in this case study.</p>
+    <!-- Hero -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+        <div class="text-center">
+          <h1
+            class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white tracking-tight pb-2"
+          >
+            400+ Pages. Zero Clarity. One Research Study That Changed Everything
+          </h1>
+          <p class="mb-4 text-base font-normal text-gray-500 pb-4">
+            To abide by a non-disclosure agreement, company, client, and product
+            identities have been obscured in this case study.
+          </p>
 
+          <div
+            class="flex flex-col items-center justify-center gap-4 mt-4 sm:mt-5 sm:gap-8 sm:flex-row pb-8"
+          >
+            <a
+              href="#step1"
+              title=""
+              class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white"
+            >
+              <p class="hover:underline">Jump to My Process</p>
+              <span class="material-symbols-outlined pl-1">
+                arrow_forward
+              </span>
+            </a>
 
-      <div class="flex flex-col items-center justify-center gap-4 mt-4 sm:mt-5 sm:gap-8 sm:flex-row pb-8">
-        <a href="#step1" title=""
-          class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white">
-          <p class="hover:underline">Jump to My Process</p>
-          <span class="material-symbols-outlined pl-1">
-            arrow_forward
-            </span>
-        </a>
+            <a
+              href="#step3"
+              title=""
+              class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white"
+            >
+              <span class="material-symbols-outlined pr-1"> play_arrow </span>
+              <p class="hover:underline">
+                The Video That Got Leadership Onboard
+              </p>
+            </a>
+          </div>
+        </div>
 
-        <a href="#step3" title="" class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white">
-          <span class="material-symbols-outlined pr-1">
-            play_arrow
-            </span>
-          <p class="hover:underline">The Video That Got Leadership Onboard</p>
-        </a>
-      </div>
-    </div>
-
-    <!-- Tools + UX Tag -->
-    <!-- <div class="flex justify-center items-center my-8 divide-x divide-gray-200 dark:divide-gray-700">
+        <!-- Tools + UX Tag -->
+        <!-- <div class="flex justify-center items-center my-8 divide-x divide-gray-200 dark:divide-gray-700">
       <div class="flex pr-3 space-x-2 sm:pr-5">
           <img data-tooltip-target="tooltip-lucid" class="h-6 grayscale hover:grayscale-0" src="/logos/Lucid-Logo.png" alt="Lucid Icon">
           <div id="tooltip-lucid" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
@@ -120,252 +177,514 @@
       </a> 
   </div> -->
 
-  <img class="w-full rounded-lg shadow-lg" src="/images/873shots_so.png" alt="Content image">
+        <img
+          class="w-full rounded-lg shadow-lg"
+          src="/images/873shots_so.png"
+          alt="Content image"
+        />
 
-    <div class="grid grid-cols-1 gap-8 mt-8 lg:gap-16 lg:grid-cols-2 lg:mt-16">
-      <div>
-        <div>
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-            Overview
-          </h3>
-          <p class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400">
-            User research swings our navigation's grouping, labels, IA, and overall user comprehension in a powerful, new direction.
-          </p>
-        </div>
+        <div
+          class="grid grid-cols-1 gap-8 mt-8 lg:gap-16 lg:grid-cols-2 lg:mt-16"
+        >
+          <div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                Overview
+              </h3>
+              <p
+                class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
+              >
+                User research swings our navigation's grouping, labels, IA, and
+                overall user comprehension in a powerful, new direction.
+              </p>
+            </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mt-8">
-          <!-- Left column -->
-          <ul class="space-y-3">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Created 400+ Page Sitemap
-              </span>
-            </li>
-        
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Prepped 88-card Card Sort
-              </span>
-            </li>
-        
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Facilitated Card Sorts for 20 Users
-              </span>
-            </li>
-        
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Facilitated 20 User Interviews
-              </span>
-            </li>
-          </ul>
-        
-          <!-- Right column -->
-          <ul class="space-y-3 mt-3 sm:mt-0">
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Presented research findings/solutions
-              </span>
-            </li>
-        
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Made user highlight reel
-              </span>
-            </li>
-        
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Front-end development
-              </span>
-            </li>
-        
-            <li class="flex items-center gap-2.5">
-              <svg class="w-5 h-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                  clip-rule="evenodd" />
-              </svg>
-              <span class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Resolved issues in dev
-              </span>
-            </li>
-          </ul>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mt-8">
+              <!-- Left column -->
+              <ul class="space-y-3">
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Created 400+ Page Sitemap
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Prepped 88-card Card Sort
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Facilitated Card Sorts for 20 Users
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Facilitated 20 User Interviews
+                  </span>
+                </li>
+              </ul>
+
+              <!-- Right column -->
+              <ul class="space-y-3 mt-3 sm:mt-0">
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Presented research findings/solutions
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Made user highlight reel
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Front-end development
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Resolved issues in dev
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                My Role
+              </h3>
+              <p
+                class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
+              >
+                Collaborated with a UI designer and developer as the UX designer
+                on a 1-month web project for the Dept of Defense, serving
+                military personnel on desktop and mobile.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                The Challenge
+              </h3>
+              <p
+                class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
+              >
+                Multiple, messy navigation menus on a 400+ page enterprise
+                platform created mass confusion in findability for our users.
+              </p>
+            </div>
+          </div>
         </div>
-        
       </div>
+    </section>
 
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-            My Role
-          </h3>
-          <p class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400">
-            Collaborated with a UI designer and developer as the UX designer on a 1-month web project for the Dept of Defense, serving military personnel on desktop and mobile.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-            The Challenge
-          </h3>
-          <p class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400">
-            Multiple, messy navigation menus on a 400+ page enterprise platform created mass confusion in findability for our users.
-          </p>
-        </div>
+    <!-- Step 1: Sitemap -->
+    <section id="step1" class="bg-white dark:bg-gray-900">
+      <div
+        class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16"
+      >
+        <p
+          class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+        >
+          STEP 1
+        </p>
+        <h2
+          class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+        >
+          Nobody Knew How Many Pages We Had. So I Built the First Map.
+        </h2>
+        <p
+          class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400 pb-8"
+        >
+          Our enterprise platform had over 400 disconnected pages, but no
+          central record. So I partnered with engineering to catalog everything,
+          define the UX scope, and give our team the clarity we needed to move
+          forward.
+        </p>
+        <a
+          href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=134-2"
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mb-6"
+        >
+          View the Map That Got This Project Started
+        </a>
+        <img
+          class="h-auto mx-auto max-w-xxl rounded-lg shadow-lg sm:shadow-xl dark:shadow-gray-800"
+          src="/images/91shots_so.png"
+          alt="image description"
+        />
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Step 1: Sitemap -->
-<section id="step1" class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16">
-      <p class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">STEP 1</p>
-      <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Nobody Knew How Many Pages We Had. So I Built the First Map.</h2>
-      <p class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400 pb-8">Our enterprise platform had over 400 disconnected pages, but no central record. So I partnered with engineering to catalog everything, define the UX scope, and give our team the clarity we needed to move forward.</p>
-      <a href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=134-2" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mb-6">
-        View the Map That Got This Project Started
-      </a>
-      <img class="h-auto mx-auto max-w-xxl rounded-lg shadow-lg sm:shadow-xl dark:shadow-gray-800" src="/images/91shots_so.png" alt="image description">
-  </div>
-</section>
-
-<!-- Step 2: Card Sort -->
-<section id="step2" class="bg-white dark:bg-gray-900">
-  <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-      <div class="mr-auto place-self-center lg:col-span-7">
-          <p class="max-w-2xl mb-2 font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">STEP 2</p>
-          <h1 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Facilitated 20 Users Sorting 88 Pages<br> — One Page at a Time</h1>
-          <p class="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">I ran 20 in-depth user interviews and card sorting sessions to uncover how real users naturally grouped our platform’s most important pages — and it reshaped our navigation strategy.</p>
-          <a href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=235-52" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+    <!-- Step 2: Card Sort -->
+    <section id="step2" class="bg-white dark:bg-gray-900">
+      <div
+        class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+      >
+        <div class="mr-auto place-self-center lg:col-span-7">
+          <p
+            class="max-w-2xl mb-2 font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            STEP 2
+          </p>
+          <h1
+            class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+          >
+            Facilitated 20 Users Sorting 88 Pages<br />
+            — One Page at a Time
+          </h1>
+          <p
+            class="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            I ran 20 in-depth user interviews and card sorting sessions to
+            uncover how real users naturally grouped our platform’s most
+            important pages — and it reshaped our navigation strategy.
+          </p>
+          <a
+            href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=235-52"
+            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+          >
             View the Card Sort Results
           </a>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img
+            class="shadow-xl rounded-lg"
+            src="/images/CardSorting-InAction-WithUsers.png"
+            alt="mockup"
+          />
+        </div>
       </div>
-      <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img class="shadow-xl rounded-lg" src="/images/CardSorting-InAction-WithUsers.png" alt="mockup">
-      </div>                
-  </div>
-</section>
+    </section>
 
-<!-- Step 3: Present -->
-<section id="step3" class="bg-white dark:bg-gray-900">
-  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16">
-    <p class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">STEP 3</p>
-      <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Presented the Numbers, Real User Pains on Video, Then Presented the Fix</h2>
-      <p class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400 pb-8">I combined a heatmap and quantitative insights with a curated highlight reel of user pain points, delivering a research presentation that aligned stakeholders and drove clear UX action.</p>
-      <a href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=134-3" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mb-6">
-        Check out the Data + Presentation
-      </a>
-      <!-- <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/z4kifno01r.js" async type="module"></script><style>wistia-player[media-id='z4kifno01r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/z4kifno01r/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="z4kifno01r" aspect="1.7777777777777777"></wistia-player> -->
-      <script src="https://fast.wistia.com/embed/medias/z4kifno01r.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_z4kifno01r seo=true videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
-    </div>
-</section>
-
-<!-- Final Step -->
-  <section id="step4" class="bg-white dark:bg-gray-900">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
-            <p class="mb-2">FINAL STEP</p>
-            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">I Directed a Navigation Redesign Based on What Users Actually Needed</h2>
-            <p class="mb-4 pb-4">Guided by user insights, I led our UI designer through a revamp of the global navbar and personally coded updates to the My Profile page — so users could finally find all their personalized pages in one logical spot as 60% of users requested.</p>
-            <a href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=235-5" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mb-6">
-              View the Final Screens
-            </a>
+    <!-- Step 3: Present -->
+    <section id="step3" class="bg-white dark:bg-gray-900">
+      <div
+        class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16"
+      >
+        <p
+          class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+        >
+          STEP 3
+        </p>
+        <h2
+          class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+        >
+          Presented the Numbers, Real User Pains on Video, Then Presented the
+          Fix
+        </h2>
+        <p
+          class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400 pb-8"
+        >
+          I combined a heatmap and quantitative insights with a curated
+          highlight reel of user pain points, delivering a research presentation
+          that aligned stakeholders and drove clear UX action.
+        </p>
+        <a
+          href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=134-3"
+          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mb-6"
+        >
+          Check out the Data + Presentation
+        </a>
+        <!-- <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/z4kifno01r.js" async type="module"></script><style>wistia-player[media-id='z4kifno01r']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/z4kifno01r/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="z4kifno01r" aspect="1.7777777777777777"></wistia-player> -->
+        <script
+          src="https://fast.wistia.com/embed/medias/z4kifno01r.jsonp"
+          async
+        ></script>
+        <script
+          src="https://fast.wistia.com/assets/external/E-v1.js"
+          async
+        ></script>
+        <div
+          class="wistia_responsive_padding"
+          style="padding: 56.25% 0 0 0; position: relative"
+        >
+          <div
+            class="wistia_responsive_wrapper"
+            style="
+              height: 100%;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 100%;
+            "
+          >
+            <div
+              class="wistia_embed wistia_async_z4kifno01r seo=true videoFoam=true"
+              style="height: 100%; position: relative; width: 100%"
+            >
+              &nbsp;
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Step -->
+    <section id="step4" class="bg-white dark:bg-gray-900">
+      <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+      >
+        <div
+          class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+        >
+          <p class="mb-2">FINAL STEP</p>
+          <h2
+            class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+          >
+            I Directed a Navigation Redesign Based on What Users Actually Needed
+          </h2>
+          <p class="mb-4 pb-4">
+            Guided by user insights, I led our UI designer through a revamp of
+            the global navbar and personally coded updates to the My Profile
+            page — so users could finally find all their personalized pages in
+            one logical spot as 60% of users requested.
+          </p>
+          <a
+            href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=235-5"
+            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mb-6"
+          >
+            View the Final Screens
+          </a>
+        </div>
         <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full rounded-lg shadow-lg" src="/images/596shots_so.png" alt="office content 1">
-            <img class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg" src="/images/38shots_so.png" alt="office content 2">
+          <img
+            class="w-full rounded-lg shadow-lg"
+            src="/images/596shots_so.png"
+            alt="office content 1"
+          />
+          <img
+            class="mt-4 w-full lg:mt-10 rounded-lg shadow-lg"
+            src="/images/38shots_so.png"
+            alt="office content 2"
+          />
         </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Closer -->
-  <section class="bg-white dark:bg-gray-900">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Want to See the Whole Thing?</h2>
-            <p class="mb-4 font-normal">From user interviews and card sorts to highlight reels and design direction — all the messy, meaningful work is here.</p>
-            <a href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=133-2" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
-                See the Work Behind the Scenes
-                <svg class="ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-            </a>
+    <!-- Closer -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div
+          class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400"
+        >
+          <h2
+            class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+          >
+            Want to See the Whole Thing?
+          </h2>
+          <p class="mb-4 font-normal">
+            From user interviews and card sorts to highlight reels and design
+            direction — all the messy, meaningful work is here.
+          </p>
+          <a
+            href="https://www.figma.com/design/emLfdPTQD44OkPOq5Qs3Cu/MyWaypoint-Navigation-Study?node-id=133-2"
+            class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700"
+          >
+            See the Work Behind the Scenes
+            <svg
+              class="ml-1 w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
         </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
-<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
-  <!-- More Case Studies -->
-  <aside aria-label="Related articles" class="bg-white dark:bg-gray-900 py-8 lg:py-24 antialiased">
-    <div class="px-4 mx-auto max-w-screen-xl">
-        <h2 class="mb-6 lg:mb-8 text-2xl font-bold text-gray-900 dark:text-white">More Case Studies</h2>
+    <!-- More Case Studies -->
+    <aside
+      aria-label="Related articles"
+      class="bg-white dark:bg-gray-900 py-8 lg:py-24 antialiased"
+    >
+      <div class="px-4 mx-auto max-w-screen-xl">
+        <h2
+          class="mb-6 lg:mb-8 text-2xl font-bold text-gray-900 dark:text-white"
+        >
+          More Case Studies
+        </h2>
         <div class="grid gap-6 lg:gap-12 md:grid-cols-2">
-            <article class="flex flex-col xl:flex-row">
-                <a href="/works/resumeBuilder.html" class="mb-2 xl:mb-0">
-                    <img src="/images/720shots_so-34.png" class="mr-5 max-w-72 rounded-lg shadow-md hover:shadow-lg" alt="Image 1">
-                </a>
-                <div class="flex flex-col justify-center">
-                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white hover:underline">
-                        <a href="/works/resumeBuilder.html">Resume Builder Redesign</a>
-                    </h2>
-                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Sloppy, non-intuitive layout is revamped into an easy to use product via UI and visual design best practices.</p>
-                    <a href="/works/resumeBuilder.html" class="inline-flex items-center font-medium underline underline-offset-4 text-gray-500 dark:text-primary-500 hover:no-underline">
-                      Read the Case Study
-                    </a>
-                </div>
-            </article>
-            <article class="flex flex-col xl:flex-row">
-                <a href="/works/halfway.html" class="mb-2 xl:mb-0">
-                    <img src="/images/750shots_so.png" class="mr-5 max-w-72 rounded-lg shadow-md hover:shadow-lg" alt="Image 2">
-                </a>
-                <div class="flex flex-col justify-center">
-                    <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white hover:underline">
-                        <a href="/works/halfway.html">Halfway</a>
-                    </h2>
-                    <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">Leveraging Google Maps APIs to help users find places to meet up halfway in between each other. Built with Node.js.</p>
-                    <a href="/works/halfway.html" class="inline-flex items-center font-medium underline underline-offset-4 text-gray-500 dark:text-primary-500 hover:no-underline">
-                      Read the Case Study
-                    </a>
-                </div>
-            </article>
-            <!-- <article class="flex flex-col xl:flex-row">
+          <article class="flex flex-col xl:flex-row">
+            <a href="/works/resumeBuilder.html" class="mb-2 xl:mb-0">
+              <img
+                src="/images/720shots_so-34.png"
+                class="mr-5 max-w-72 rounded-lg shadow-md hover:shadow-lg"
+                alt="Image 1"
+              />
+            </a>
+            <div class="flex flex-col justify-center">
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white hover:underline"
+              >
+                <a href="/works/resumeBuilder.html">Resume Builder Redesign</a>
+              </h2>
+              <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">
+                Sloppy, non-intuitive layout is revamped into an easy to use
+                product via UI and visual design best practices.
+              </p>
+              <a
+                href="/works/resumeBuilder.html"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-gray-500 dark:text-primary-500 hover:no-underline"
+              >
+                Read the Case Study
+              </a>
+            </div>
+          </article>
+          <article class="flex flex-col xl:flex-row">
+            <a href="/works/halfway.html" class="mb-2 xl:mb-0">
+              <img
+                src="/images/750shots_so.png"
+                class="mr-5 max-w-72 rounded-lg shadow-md hover:shadow-lg"
+                alt="Image 2"
+              />
+            </a>
+            <div class="flex flex-col justify-center">
+              <h2
+                class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white hover:underline"
+              >
+                <a href="/works/halfway.html">Halfway</a>
+              </h2>
+              <p class="mb-4 text-gray-500 dark:text-gray-400 max-w-sm">
+                Leveraging Google Maps APIs to help users find places to meet up
+                halfway in between each other. Built with Node.js.
+              </p>
+              <a
+                href="/works/halfway.html"
+                class="inline-flex items-center font-medium underline underline-offset-4 text-gray-500 dark:text-primary-500 hover:no-underline"
+              >
+                Read the Case Study
+              </a>
+            </div>
+          </article>
+          <!-- <article class="flex flex-col xl:flex-row">
                 <a href="#" class="mb-2 xl:mb-0">
                     <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png" class="mr-5 max-w-sm" alt="Image 3">
                 </a>
@@ -394,31 +713,37 @@
                 </div>
             </article> -->
         </div>
-    </div>
-  </aside>
+      </div>
+    </aside>
 
-
-  <!-- Footer -->
-  <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
-    <div class="mx-auto max-w-screen-xl text-center">
-        <a href="/index.html" class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white">
-            Jason DiPopolo    
+    <!-- Footer -->
+    <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+      <div class="mx-auto max-w-screen-xl text-center">
+        <a
+          href="/index.html"
+          class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+        >
+          Jason DiPopolo
         </a>
         <p class="my-6 text-gray-500 dark:text-gray-400">Product Designer</p>
-        <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
-            <li>
-                <a href="/#works" class="mr-4 hover:underline md:mr-6 ">Works</a>
-            </li>
-            <!-- <li>
+        <ul
+          class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white"
+        >
+          <li>
+            <a href="/#works" class="mr-4 hover:underline md:mr-6">Works</a>
+          </li>
+          <!-- <li>
                 <a href="/about.html" class="mr-4 hover:underline md:mr-6">About</a>
             </li> -->
-            <!-- <li>
+          <!-- <li>
                 <a href="/blog.html" class="mr-4 hover:underline md:mr-6 ">Blog</a>
             </li> -->
-            <li>
-                <a href="/contact.html" class="mr-4 hover:underline md:mr-6">Contact</a>
-            </li>
-            <!-- <li>
+          <li>
+            <a href="/contact.html" class="mr-4 hover:underline md:mr-6"
+              >Contact</a
+            >
+          </li>
+          <!-- <li>
                 <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
             </li>
             <li>
@@ -428,11 +753,16 @@
                 <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
             </li> -->
         </ul>
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">©2025 <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights Reserved</span>
-    </div>
-  </footer>
-  
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >©<span class="js-current-year"></span>
+          <a href="#" class="hover:underline">Jason DiPopolo</a> | All Rights
+          Reserved</span
+        >
+      </div>
+    </footer>
+
     <!-- Flowbite CDN (End of Body) -->
+    <script src="/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-</body>
+  </body>
 </html>

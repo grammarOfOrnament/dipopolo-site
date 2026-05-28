@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jason DiPopolo</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Flowbite CDN (Head) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/logos/icon-me.png" />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="/index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Jason DiPopolo</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <!-- <li>
+            <a href="/index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+          </li> -->
+            <li>
+              <a
+                href="/#works"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Explore My Work</a
+              >
+            </li>
+            <!-- <li>
+            <a href="/about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li> -->
+            <!-- <li>
+            <a href="/blog.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li> -->
+            <li>
+              <a
+                href="/contact.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+        <div class="text-center">
+          <h1
+            class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white tracking-tight pb-2"
+          >
+            StellarCut: Validating Human-In-The-Loop AI Audio Editing in 1 Week
+          </h1>
+          <p class="mb-4 text-base font-normal text-gray-500 pb-4">
+            A case study in rapid iteration, leveraging AI tools, and validating
+            product ideas in the era of AI-assisted development.
+          </p>
+
+          <div
+            class="flex flex-col items-center justify-center gap-4 mt-4 sm:mt-5 sm:gap-8 sm:flex-row pb-8"
+          >
+            <a
+              href="#step1"
+              title=""
+              class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white"
+            >
+              <p class="hover:underline">The Problem I Solved</p>
+              <span class="material-symbols-outlined pl-1">
+                arrow_forward
+              </span>
+            </a>
+
+            <a
+              href="#step2"
+              title=""
+              class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white"
+            >
+              <span class="material-symbols-outlined pr-1"> auto_awesome </span>
+              <p class="hover:underline">How I Built It Fast</p>
+            </a>
+
+            <a
+              href="#step3"
+              title=""
+              class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white"
+            >
+              <span class="material-symbols-outlined pr-1"> insights </span>
+              <p class="hover:underline">What I Learned</p>
+            </a>
+          </div>
+        </div>
+
+        <img
+          class="w-full rounded-lg shadow-lg"
+          src="/images/440shots_so.png"
+          alt="Content image"
+        />
+
+        <div
+          class="grid grid-cols-1 gap-8 mt-8 lg:gap-16 lg:grid-cols-2 lg:mt-16"
+        >
+          <div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                Overview
+              </h3>
+              <p
+                class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
+              >
+                StellarCut is an AI-powered audio editing tool that turns messy
+                recordings into polished content in minutes. Record audio, get
+                an instant transcript powered by Speech-to-Text AI, and edit
+                both the waveform and transcript in sync to remove awkward
+                pauses, filler words, or stumbles by clipping the transcript.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mt-8">
+              <!-- Left column -->
+              <ul class="space-y-3">
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Waveform & Transcript Editing
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Built with AI (Lovable.dev)
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Integrated ElevenLabs API
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Lean approach
+                  </span>
+                </li>
+              </ul>
+
+              <!-- Right column -->
+              <ul class="space-y-3 mt-3 sm:mt-0">
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Built in 1 Week
+                  </span>
+                </li>
+
+                <li class="flex items-center gap-2.5">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Testing with real users
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                My Role
+              </h3>
+              <p
+                class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
+              >
+                Starting from scratch as a product designer and builder, I
+                identified a problem, shaped the product vision, directed
+                development using AI, integrated the ElevenLabs API for
+                transcription, and drove the full iteration cycle from launch to
+                refined product.
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                The Insight
+              </h3>
+              <p
+                class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
+              >
+                Content creators like podcasters, streamers, video producers
+                will waste hours cleaning up audio recordings. They manually cut
+                sections, deal with noisy recordings, and lose time to
+                repetitive editing work. Meanwhile, AI tools for transcription
+                and generation have become accessible, but no one was combining
+                them into a seamless audio editor experience. This was the gap.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 1: The Problem -->
+    <section id="step1" class="bg-white dark:bg-gray-900">
+      <div
+        class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 sm:text-center lg:py-16"
+      >
+        <p
+          class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+        >
+          THE PROBLEM
+        </p>
+        <h2
+          class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+        >
+          Audio Editing Was Too Slow
+        </h2>
+        <p
+          class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400 pb-8"
+        >
+          I record a lot of podcasts, audio for videos, and more. Noise, filler
+          words, and awkward pauses were eating up my editing time. Every tool
+          felt either too manual or too limited. With AI, I could validate my
+          idea quickly.
+        </p>
+
+        <div class="mt-12 p-8 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            The Problematic Workflow
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">1</div>
+              <p class="text-gray-600 dark:text-gray-400">
+                <strong>Record</strong> (often with background noise)
+              </p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">2</div>
+              <p class="text-gray-600 dark:text-gray-400">
+                <strong>Manually edit</strong> audio waveforms (tedious,
+                imprecise)
+              </p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">3</div>
+              <p class="text-gray-600 dark:text-gray-400">
+                <strong>Hope</strong> to have caught all the filler words and
+                stumbles
+              </p>
+            </div>
+          </div>
+
+          <p class="text-gray-600 dark:text-gray-400 mt-8 italic"></p>
+        </div>
+
+        <!-- Placeholder for a screenshot or demo video of the problem -->
+        <div
+          class="mt-12 bg-gray-200 dark:bg-gray-700 rounded-lg h-96 flex items-center justify-center"
+        >
+          <img
+            src="https://images.ctfassets.net/lzny33ho1g45/6mQnaDFSOlPD1qjHJvdDj4/279cb965166d0ae33ac1ec399b44469a/image4.jpeg"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <p
+          class="text-gray-500 dark:text-gray-400 text-lg text-center mt-4 px-4"
+        >
+          The average audio editing experience is done exclusively with
+          waveforms
+        </p>
+      </div>
+    </section>
+
+    <!-- Step 2: How I Built It -->
+    <section id="step2" class="bg-white dark:bg-gray-900">
+      <div
+        class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+      >
+        <div class="mr-auto place-self-center lg:col-span-7">
+          <p
+            class="max-w-2xl mb-2 font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            THE BUILD
+          </p>
+          <h1
+            class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+          >
+            Could I validate an AI SaaS product idea rapidly using AI-powered
+            development tools?
+          </h1>
+          <p
+            class="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            Instead of spending months hiring a team or building alone, I used
+            Lovable.dev to scaffold the interface and manage the component
+            structure, then integrated the ElevenLabs Speech-to-Text API for
+            transcription.
+          </p>
+
+          <!-- <div class="bg-blue-50 dark:bg-blue-900 rounded-lg p-6 mb-6">
+            <h3 class="font-bold text-gray-900 dark:text-white mb-4">The Build Timeline</h3>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li><strong>Day 1–2:</strong> Ideated core feature set, set up Lovable project, began UI scaffolding</li>
+              <li><strong>Day 3:</strong> Integrated ElevenLabs API for audio recording & transcription</li>
+              <li><strong>Day 4:</strong> Built the dual-editing interface (waveform + transcript sync)</li>
+              <li><strong>Day 5:</strong> First testing round with myself—found critical UX issues</li>
+              <li><strong>Day 6:</strong> Iterated on editing flow, refined word-clipping interaction</li>
+              <li><strong>Day 7:</strong> Polish, edge case fixes, and soft launch</li>
+            </ul>
+          </div> -->
+
+          <p
+            class="max-w-2xl mb-6 font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            <strong>Why This Matters for 2026:</strong> I rapidly validated that
+            the core idea, a workflow using synced transcripts + waveform
+            editing was actually valuable. In 2026, product designers who can
+            quickly prototype, test, and iterate using AI tools are going to be
+            the ones shipping real products.
+          </p>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <div
+            class="w-full bg-gray-200 dark:bg-gray-700 rounded-lg h-96 flex items-center justify-center"
+          >
+            <video
+              src="/images/SC-Recording-Short.webm"
+              alt="StellarCut UI Screenshot"
+              class="w-full h-full object-cover rounded-lg"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
+        </div>
+        <div class="mt-8 lg:mt-12 lg:col-span-12">
+          <img
+            class="w-full rounded-lg shadow-xl object-cover"
+            src="/images/StellarCut-Editor_UI.png"
+            alt="StellarCut interface with waveform and transcript"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Step 3: Testing & Iteration -->
+    <section id="step3" class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div class="space-y-6">
+            <p
+              class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+            >
+              MY EXPERIMENT
+            </p>
+            <h2
+              class="text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+            >
+              Modern Product Designers Ship With AI, Not Without It
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-lg lg:text-xl">
+              I didn't wait for perfect research or unlimited budget. I saw a
+              gap, understood what tools were available, and shipped something
+              useful in a week. That's the skillset 2026 demands.
+            </p>
+            <a
+              href="https://stellarcuteditor.com/"
+              class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-teal-700 rounded-lg hover:bg-teal-800 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-900"
+            >
+              Try StellarCut
+            </a>
+          </div>
+
+          <div
+            class="rounded-3xl overflow-hidden bg-gray-200 dark:bg-gray-800 shadow-lg"
+          >
+            <video class="w-full h-full object-cover" autoplay loop muted>
+              <source src="/images/SC-ClipWord-02.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Human-in-the-Loop -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            NOTE
+          </p>
+          <h2
+            class="mb-6 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Why Human-in-the-Loop?
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 text-lg lg:text-xl">
+            For this project, I wanted to leverage AI in smart ways. It's often
+            shoehorned it into everything. But StellarCut uses AI in a way where
+            humans work alongside it to obtain transparent, automated outcomes.
+            This leads to faster results, but also results leading to happy
+            users.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+      <div class="mx-auto max-w-screen-xl text-center">
+        <a
+          href="/index.html"
+          class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+        >
+          Jason DiPopolo
+        </a>
+        <p class="my-6 text-gray-500 dark:text-gray-400">Product Designer</p>
+        <ul
+          class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white"
+        >
+          <li>
+            <a href="/#works" class="mr-4 hover:underline md:mr-6">Works</a>
+          </li>
+          <!-- <li>
+                <a href="/about.html" class="mr-4 hover:underline md:mr-6">About</a>
+            </li> -->
+          <!-- <li>
+                <a href="/blog.html" class="mr-4 hover:underline md:mr-6 ">Blog</a>
+            </li> -->
+          <li>
+            <a href="/contact.html" class="mr-4 hover:underline md:mr-6"
+              >Contact</a
+            >
+          </li>
+          <!-- <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Affiliate Program</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+            </li>
+            <li>
+                <a href="#" class="mr-4 hover:underline md:mr-6">Campaigns</a>
+            </li> -->
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          ©<span class="js-current-year"></span>
+          <a href="/index.html" class="hover:underline">Jason DiPopolo</a> | All
+          Rights Reserved</span
+        >
+        >
+      </div>
+    </footer>
+
+    <!-- Flowbite CDN (End of Body) -->
+    <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  </body>
+</html>
