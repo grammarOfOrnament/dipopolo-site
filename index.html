@@ -196,7 +196,18 @@
   
 <!-- Hero Content -->
   <div class="flex-grow flex items-center justify-center px-4 py-8">
-    <div class="grid max-w-screen-xl lg:gap-8 xl:gap-0 lg:grid-cols-12">
+    <div class="grid max-w-screen-xl lg:gap-8 xl:gap-0 lg:grid-cols-12 w-full">
+      <!-- Mobile Hero Image (visible only on mobile) -->
+      <div class="lg:hidden md:hidden w-full mb-8 flex justify-center">
+        <img class="w-full h-64 object-cover object-top rounded-3xl shadow-lg" src="images/ProfilePhoto26-1.avif" alt="profile photo of Jason DiPopolo">
+      </div>
+
+      <!-- Tablet Hero Image (visible only on tablet) -->
+      <div class="hidden md:flex lg:hidden w-full mb-8 justify-start">
+        <img class="w-96 h-64 object-cover object-top rounded-3xl shadow-lg" src="images/ProfilePhoto26.avif" alt="profile photo of Jason DiPopolo">
+      </div>
+      
+      <!-- Text Content -->
       <div class="mr-auto place-self-center lg:col-span-7">
         <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
           Senior Product Designer
@@ -211,8 +222,10 @@
           View Resume/CV
         </a> 
       </div>
+      
+      <!-- Desktop Hero Image (visible only on desktop) -->
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img class="rounded-lg shadow-lg" src="images/hero-image-me-mobile.avif" alt="mockup light">
+        <img class="rounded-full shadow-lg" src="images/ProfilePhoto26.avif" alt="profile photo of Jason DiPopolo">
       </div>
     </div>
   </div>
@@ -267,7 +280,7 @@
         <div class="grid gap-4 mb-4 sm:grid-cols-3 sm:gap-6 md:gap-12 sm:mb-5">
             <!-- Column -->
             <div class="sm:col-span-2">
-              <a href="works/stellarcut.html"><img class="rounded-lg shadow-lg hover:shadow-xl transition delay-150 duration-300 ease-in-out mb-6" src="images/310shots_so.png" alt=""></a>
+              <a href="works/stellarcut.html"><img class="rounded-lg shadow-lg hover:shadow-xl transition delay-150 duration-300 ease-in-out mb-6" src="images/310shots_so.png" alt="Screenshot of StellarCut AI audio editing interface"></a>
               <p class="font-normal text-gray-500 dark:text-gray-400 ">Integrating AI-powered editing capabilities into a user-friendly interface for podcast creators.</p>
           </div>
             <!-- Column -->
@@ -299,7 +312,7 @@
         <div class="grid gap-4 mb-4 sm:grid-cols-3 sm:gap-6 md:gap-12 sm:mb-5">
             <!-- Column -->
             <div class="sm:col-span-2">
-              <a href="works/enterpriseAppNavigation.html"><img class="rounded-lg shadow-lg hover:shadow-xl transition delay-150 duration-300 ease-in-out mb-6" src="images/873shots_so.png" alt=""></a>
+              <a href="works/enterpriseAppNavigation.html"><img class="rounded-lg shadow-lg hover:shadow-xl transition delay-150 duration-300 ease-in-out mb-6" src="images/873shots_so.png" alt="Screenshot of enterprise navigation redesign"></a>
               <p class="font-normal text-gray-500 dark:text-gray-400 ">User research swings our navigation's grouping, labels, IA, and overall user comprehension in a powerful, new direction.</p>
           </div>
             <!-- Column -->
@@ -371,7 +384,7 @@
         <div class="grid gap-4 mb-4 sm:grid-cols-3 sm:gap-6 md:gap-12 sm:mb-5">
             <!-- Column -->
             <div class="sm:col-span-2">
-                <a href="works/resumeBuilder.html"><img class="rounded-lg shadow-lg hover:shadow-xl transition delay-150 duration-300 ease-in-out mb-6" src="images/720shots_so.png" alt=""></a>
+                <a href="works/resumeBuilder.html"><img class="rounded-lg shadow-lg hover:shadow-xl transition delay-150 duration-300 ease-in-out mb-6" src="images/720shots_so.png" alt="Screenshot of the resume builder interface"></a>
                 <p class="font-normal text-gray-500 dark:text-gray-400 ">Sloppy, non-intuitive layout is revamped into an easy-to-use product via UI and visual design best practices.</p>
             </div>
             <!-- Column -->
@@ -432,7 +445,7 @@
             <div class="pb-12">
               <a href="https://sagamafia.lovable.app/">
               <img class="object-cover w-full rounded-lg shadow-lg mb-6" src="images/mafia-43.png"
-                alt="">
+                alt="Screenshot of the Mafia party chat interface">
               </a>
               <div class="space-y-3 mb-6">
                 <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -447,7 +460,7 @@
             <div class="pb-12">
               <a href="https://grideyes.app/">
               <img class="object-cover w-full rounded-lg shadow-lg mb-6" src="images/GEgif-Crop.gif"
-                alt="">
+                alt="Screenshot of the Grid Eyes graphic design tool interface">
               </a>
               <div class="space-y-3 mb-6">
                 <h3 class="text-2xl font-bold leading-tight text-gray-900 dark:text-white">
@@ -611,19 +624,19 @@
 
 
   <!-- Contact -->
-  <section id="contact" class="py-16">
+  <section class="py-16">
     <div class="max-w-screen-xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Let's Work Together</h2>
       <p class="mt-3 text-lg text-gray-600 dark:text-gray-300">Let's talk about how I can bring value to your team.</p>
 
       <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <button onclick="copyEmail()" class="inline-flex btn-animated items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center rounded-lg shadow-sm hover:brightness-105 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-900" aria-label="Copy Email" aria-label="Copy email">
+        <button onclick="copyEmail()" class="inline-flex btn-animated items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center rounded-lg shadow-sm hover:brightness-105 focus:ring-4 focus:ring-teal-300 dark:focus:ring-teal-900" aria-label="Copy email address">
           <span class="material-symbols-outlined me-2">
             content_copy
           </span> 
           jasondipopolo@pm.me
         </button>
-        <a target="_blank" href="https://www.linkedin.com/in/jasondipopolo/" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-500 dark:hover:bg-gray-600 dark:focus:ring-gray-800" aria-label="LinkedIn">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jasondipopolo/" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-500 dark:hover:bg-gray-600 dark:focus:ring-gray-800" aria-label="LinkedIn">
           LinkedIn
         </a>
         <!-- <a href="/Jason DiPopolo's Resume_CV.pdf" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800" aria-label="View resume">
