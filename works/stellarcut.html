@@ -111,11 +111,13 @@
           <h1
             class="mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white tracking-tight pb-2"
           >
-            StellarCut: Building Human-In-The-Loop AI Audio Editing SaaS in 1 Week
+            Designing a Trustworthy Human-in-the-Loop AI Editing Workflow
           </h1>
           <p class="mb-4 text-base font-normal text-gray-500 pb-4">
-            A case study in rapid iteration, leveraging AI tools, and validating
-            product ideas in the era of AI-assisted development.
+            AI can automate editing, but it shouldn't automate judgment. This
+            project explores how I designed an editing workflow where AI
+            accelerates tedious work while keeping creators in control of every
+            decision.
           </p>
 
           <div
@@ -169,11 +171,11 @@
               <p
                 class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
               >
-                StellarCut is an AI-powered audio editing tool that turns messy
-                recordings into polished content in minutes. Record audio, get
-                an instant transcript powered by Speech-to-Text AI, and edit
-                both the waveform and transcript in sync to remove awkward
-                pauses, filler words, or stumbles by clipping the transcript.
+                Creators spend hours making mechanical edits that add little
+                creative value. Modern speech recognition enables
+                transcript-based editing. But how do you automate repetitive
+                work without making creators lose trust? To find out, I built
+                and validated a working product in one week.
               </p>
             </div>
 
@@ -314,11 +316,10 @@
               <p
                 class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
               >
-                Starting from scratch as a product designer and builder, I
-                identified a problem, shaped the product vision, directed
-                development using AI, integrated the ElevenLabs API for
-                transcription, and drove the full iteration cycle from launch to
-                refined product.
+                I owned the entire product lifecycle from opportunity
+                identification and UX strategy to interface design, AI
+                integration, front-end implementation, and post-launch
+                iteration.
               </p>
             </div>
 
@@ -329,12 +330,9 @@
               <p
                 class="mt-2 text-lg font-normal text-gray-500 dark:text-gray-400"
               >
-                Content creators like podcasters, streamers, video producers
-                will waste hours cleaning up audio recordings. They manually cut
-                sections, deal with noisy recordings, and lose time to
-                repetitive editing work. Meanwhile, AI tools for transcription
-                and generation have become accessible, but no one was combining
-                them into a seamless audio editor experience. This was the gap.
+                Which decisions belong to AI? Which decisions belong to humans?
+                How do users maintain confidence after automation? How do
+                transcript editing and waveform editing reinforce each other?
               </p>
             </div>
           </div>
@@ -350,12 +348,13 @@
         <p
           class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
         >
-          THE PROBLEM
+          THE OPPORTUNITY
         </p>
         <h2
           class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
         >
-          Audio Editing Was Too Slow
+          How should editing change when software understands speech instead of
+          just sound?
         </h2>
         <p
           class="font-normal text-gray-500 md:text-lg lg:text-xl dark:text-gray-400 pb-8"
@@ -412,6 +411,70 @@
           The average audio editing experience is done exclusively with
           waveforms
         </p>
+      </div>
+    </section>
+
+    <!-- Design Decisions -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            DESIGNING THE HUMAN-AI WORKFLOW
+          </p>
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Key Design Decisions
+          </h2>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="rounded-lg p-6 bg-gray-50 dark:bg-gray-800 shadow">
+            <h3
+              class="text-lg font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              AI suggests. Users decide.
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Automation speeds editing but never silently changes content.
+            </p>
+          </div>
+
+          <div class="rounded-lg p-6 bg-gray-50 dark:bg-gray-800 shadow">
+            <h3
+              class="text-lg font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Edit language, not waveforms.
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              People think in sentences, not audio peaks.
+            </p>
+          </div>
+
+          <div class="rounded-lg p-6 bg-gray-50 dark:bg-gray-800 shadow">
+            <h3
+              class="text-lg font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Keep audio and transcript synchronized.
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Every transcript change immediately reflects in the waveform.
+            </p>
+          </div>
+
+          <div class="rounded-lg p-6 bg-gray-50 dark:bg-gray-800 shadow">
+            <h3
+              class="text-lg font-semibold text-gray-900 dark:text-white mb-2"
+            >
+              Preserve confidence.
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Users can always verify edits visually before exporting.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
