@@ -1,0 +1,873 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Data Investigator</title>
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/logos/icon-me.png" />
+  </head>
+  <body class="bg-white dark:bg-gray-900">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a
+          href="/index.html"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Jason DiPopolo</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="/#works"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Explore My Work</a
+              >
+            </li>
+            <li>
+              <a
+                href="/contact.html"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact Me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
+        <div class="text-center">
+          <span
+            class="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600"
+          >
+            Concept prototype
+          </span>
+          <p
+            class="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
+            All data in the prototype is synthetic and not affiliated with any financial institution.</p>
+          <h1
+            class="mt-6 mb-4 text-4xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+          >
+            AI Data Investigator: Making AI Answers Verifiable for Financial Risk
+            Analysts
+          </h1>
+          <p class="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400">
+            A concept prototype on trust, transparency, and graceful failure in
+            AI-powered financial investigation.
+          </p>
+
+          <div
+            class="flex flex-col items-center justify-center gap-4 mt-4 sm:mt-5 sm:gap-8 sm:flex-row pb-8"
+          >
+            <a
+              href="#overview"
+              title=""
+              class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white"
+            >
+              <p class="hover:underline">Jump to overview</p>
+              <span class="material-symbols-outlined pl-1">arrow_forward</span>
+            </a>
+
+            <a
+              href="https://stellular-taiyaki-69a926.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center text-base font-semibold leading-tight text-black dark:text-white"
+            >
+              <span class="material-symbols-outlined pr-1">launch</span>
+              <p class="hover:underline">View the live prototype</p>
+            </a>
+          </div>
+        </div>
+
+        
+
+        <img
+          class="mx-auto mt-8 rounded-lg shadow-sm sm:mt-12"
+          src="../images/unusualtransactions-shots.avif"
+          alt="Screenshot of the AI Data Investigator prototype, showing a dashboard with a query box, example questions, and five investigation cards."
+    </section>
+
+    <section id="overview" class="bg-white dark:bg-gray-900">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 lg:py-16">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-start">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
+              Overview
+            </h2>
+            <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
+              AI Data Investigator lets a risk or compliance analyst ask
+              questions about transaction data in plain English. Instead of a
+              paragraph, it returns a structured analysis:
+            </p>
+            <ul
+              class="mt-4 list-disc space-y-2 pl-6 text-lg text-gray-500 dark:text-gray-400"
+            >
+              <li>The finding.</li>
+              <li>How confident it is and why.</li>
+              <li>The evidence behind it.</li>
+              <li>The underlying transactions.</li>
+              <li>The SQL it generated.</li>
+              <li>The policy it relied on.</li>
+            </ul>
+            <div class="mt-8">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                Who It’s For
+              </h3>
+              <p class="mt-3 text-lg text-gray-500 dark:text-gray-400">
+                An experienced risk analyst that's fluent in data but not necessarily in
+                SQL. Their case notes have to distinguish what they observed from what
+                they concluded.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                My role
+              </h3>
+              <p class="mt-3 text-lg text-gray-500 dark:text-gray-400">
+                Solo product designer and builder. I defined the problem and
+                interaction model, designed the trust and transparency patterns,
+                directed development with an AI coding agent, and tested the
+                output to find and fix where the AI got things wrong.
+              </p>
+            </div>
+
+            <div
+              class="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700"
+            >
+              <table
+                class="w-full text-left text-sm text-gray-600 dark:text-gray-300"
+              >
+                <tbody>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th
+                      class="bg-gray-50 px-4 py-3 font-semibold text-gray-900 dark:bg-gray-800 dark:text-white"
+                    >
+                      Type
+                    </th>
+                    <td class="px-4 py-3">Self-initiated concept</td>
+                  </tr>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th
+                      class="bg-gray-50 px-4 py-3 font-semibold text-gray-900 dark:bg-gray-800 dark:text-white"
+                    >
+                      Timeline
+                    </th>
+                    <td class="px-4 py-3">3 days</td>
+                  </tr>
+                  <tr class="border-b border-gray-200 dark:border-gray-700">
+                    <th
+                      class="bg-gray-50 px-4 py-3 font-semibold text-gray-900 dark:bg-gray-800 dark:text-white"
+                    >
+                      Tools
+                    </th>
+                    <td class="px-4 py-3">
+                      Claude Code, React, TypeScript, Tailwind CSS, Netlify
+                    </td>
+                  </tr>
+                  <tr>
+                    <th
+                      class="bg-gray-50 px-4 py-3 font-semibold text-gray-900 dark:bg-gray-800 dark:text-white"
+                    >
+                      Focus
+                    </th>
+                    <td class="px-4 py-3">
+                      Explainability · Confidence indicators · Error recovery ·
+                      RAG · Permission-aware AI · Prototyping in code
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="px-4 py-8 mx-auto lg:py-24">
+        <div class="mx-auto text-center">
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            At A Glance
+          </h2>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div
+            class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+          >
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Problem</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              A chatbot connected to a database gives answers analysts can’t
+              verify. In regulated finance, an answer you can’t verify is a
+              liability.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+          >
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Approach</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              Answers separate data from interpretation, explain their
+              confidence, expose their evidence and sources, fail honestly, and
+              respect access permissions.
+            </p>
+          </div>
+          <div
+            class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+          >
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Outcome</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              A working, hosted prototype over 1,000 synthetic transactions: 5
+              guided investigations, 12 analysis types, and 3 response types.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16 mb-24">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-start">
+          <div>
+            <h2
+              class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"
+            >
+              The Problem
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 text-lg">
+              Risk, compliance, and operations analysts spend their day
+              answering why:
+              <ul
+              class="mt-4 list-disc space-y-2 pl-6 text-lg text-gray-500 dark:text-gray-400"
+            >
+              <li>why did payments fail?</li>
+              <li>why is this merchant spiking?</li>
+              <li>which transactions need review?</li>
+            </ul>
+            </p>
+            <p class="mt-6 text-gray-600 dark:text-gray-400 text-lg">
+              The answers are in the data, but getting to them usually means writing SQL or waiting on
+              someone who can. Can AI solve this? The common pattern, a chat
+              window connected to a database, returns a fluent paragraph with no
+              way to <b>verify</b> it.
+            </p>
+            <p class="mt-6 text-gray-600 dark:text-gray-400 text-lg">
+              In a consumer app, a wrong answer is an
+              annoyance. In a bank, an analyst who escalates or clears a case on
+              a wrong AI answer creates regulatory exposure and real harm to
+              customers.
+            </p>
+            <p class="mt-6 text-gray-600 dark:text-gray-400 text-lg">
+              So the design question wasn’t
+              <span class="italic">“how do we make AI answer questions?”</span>
+              It was
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >“how do we make its answers verifiable?”</span
+              >
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-800 rounded-3xl">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Ask → Analyze → Understand → Verify → Dive Deeper
+          </h2>
+        </div>
+
+        <div
+          class="mt-8 rounded-2xl p-8 text-center"
+        >
+        <img
+            class="mx-auto mb-4 text-gray-400 rounded-xl"
+            src="../images/aiDataInvestigator-dashboard.avif"
+            alt="Diagram showing the core loop: Ask → Analyze → Understand → Verify → Dive Deeper"
+          />
+          <p class="text-gray-600 dark:text-gray-300">
+            The analyst asks a question, the AI analyzes the data, and the
+            answer is structured so the analyst can understand it, verify it,
+            and dive deeper.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16 my-24">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Key Design Decisions
+          </h2>
+        </div>
+
+        <div class="mt-10 space-y-10">
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                1. AI Insights vs Real Data
+              </h3>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                Measured facts appear in a plain "Observed data"
+                grid. The AI’s reading appears in a separately styled block,
+                labelled "AI interpretation (not observed data)." The two never blend.
+              </p>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >Why:</span>
+                compliance case notes must keep facts separate from judgment. An
+                interface that blends them teaches analysts to blend them too.
+              </p>
+            </div>
+
+              <img src="../images/aiDataInvestigator-interpretationVSobserveddata.avif" class="rounded-md border border-gray-200 dark:border-gray-600" alt="Data vs. interpretation">
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                2. Clear Confidence Scores
+              </h3>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                Every answer carries a High, Moderate, or Low rating plus a
+                written rationale stating what the confidence
+                <span class="italic">doesn’t</span> cover.
+              </p>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                The language intentionally avoids definitive statements. The geographic analysis goes
+                further, rating its own result
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >Low</span> and arguing against it.
+              </p>
+            </div>
+                          <img src="../images/aiDataInvestigator-lowConfidence.avif" class="rounded-md border border-gray-200 dark:border-gray-600" alt="Data vs. interpretation">
+
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                3. Verify For Yourself
+              </h3>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                The underlying transactions, generated SQL, and reasoning are one click away.
+              </p>
+              <ul
+                class="mt-4 list-disc space-y-2 pl-5 text-gray-600 dark:text-gray-300"
+              >
+                <li>
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >Graded evidence:</span
+                  >
+                  each claim is tagged supporting, corroborating, or weak, along
+                  with how it was established. Weak evidence is shown, not
+                  hidden.
+                </li>
+                <li>
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >"View transactions" Section:</span
+                  >
+                  a sortable, filterable table of the records behind the
+                  finding. Any row opens its full detail.
+                </li>
+                <li>
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >"Show SQL" Section:</span
+                  >
+                  a technical analyst can verify how their question became a
+                  query.
+                </li>
+                <li>
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >"Why am I seeing this?" Section:</span
+                  >
+                  explains the data analyzed, the pattern detected, the
+                  assumptions made, and what the confidence level means.
+                </li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+                          <img src="../images/aiDataInvestigator-Transactions.avif" class="rounded-md border border-gray-200 dark:border-gray-600 mb-4" alt="Data vs. interpretation">
+                          <img src="../images/aiDataInvestigator-showSQL.avif" class="rounded-md border border-gray-200 dark:border-gray-600" alt="Data vs. interpretation">
+             
+            </div>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                4. Sources the AI Can Cite (RAG)
+              </h3>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                Policy questions retrieve from a library of fictional policy
+                documents. The answer shows the exact passage it relied on,
+                labelled as a source, and
+                <span class="font-semibold text-gray-900 dark:text-white"
+                  >View source</span
+                >
+                opens the full document.
+              </p>
+              
+            </div>
+              <img src="../images/aiDataInvestigator-policies.avif" class="rounded-md border border-gray-200 dark:border-gray-600" alt="Data vs. interpretation">
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                5. Ensuring the AI Refuses to Answer When It Shouldn’t
+              </h3>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                The AI is trained to refuse questions it can’t answer, and to explain why. Two common cases are uncertainty and permissions:
+              </p>
+              <ul
+                class="mt-4 list-disc space-y-2 pl-5 text-gray-600 dark:text-gray-300"
+              >
+                <li>
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >Uncertainty:</span
+                  >
+                  “Which transactions will definitely become fraudulent?”
+                  returns “I can’t reliably determine that.” The AI explains how it cannot predict 
+                  the future and suggests follow-up questions that the data can answer.
+                </li>
+                <li>
+                  <span class="font-semibold text-gray-900 dark:text-white"
+                    >Permissions:</span
+                  >
+                  “Show me the customer’s full personal information” explains
+                  that a Risk Analyst role doesn’t include identity data, lists
+                  what’s withheld and what’s available, and offers a path to the
+                  permitted information. Access is enforced before the AI analysis
+                  runs so the AI never reads restricted fields and then summarizes
+                  around them.
+                </li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+              <img src="../images/aiDataInvestigator-predictFuture.avif" class="rounded-md border border-gray-200 dark:border-gray-600 mb-4" alt="Data vs. interpretation">
+              <img src="../images/aiDataInvestigator-permissions.avif" class="rounded-md border border-gray-200 dark:border-gray-600" alt="Data vs. interpretation">
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-gray-800">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+              6. The AI recommends; the analyst decides
+            </h3>
+            <p class="mt-4 text-gray-600 dark:text-gray-300">
+              Suggested next steps are labelled
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >Advisory. Nothing here has been carried out.</span
+              >
+              Consequential actions such as escalating a case, restricting an
+              account, or contacting a customer stay with people. Every answer
+              also shows
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >Interpreted as: …</span
+              >
+              so a misunderstood question is visible rather than silently
+              answered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-800 rounded-3xl mb-24">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Building It: Prototyping with Data
+          </h2>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          <img
+            class="h-12 w-12 rounded-lg object-contain md:h-16 md:w-16"
+            src="../images/claude-code.svg"
+            alt="Claude Code logo"
+          />
+          <img
+            class="h-12 w-12 rounded-lg object-contain md:h-16 md:w-16"
+            src="../images/react.svg"
+            alt="React logo"
+          />
+          <img
+            class="h-12 w-12 rounded-lg object-contain md:h-16 md:w-16"
+            src="../images/transactions-1000.svg"
+            alt="Transactions icon"
+          />
+          <img
+            class="h-12 w-12 rounded-lg object-contain md:h-16 md:w-16"
+            src="../images/customers-150.svg"
+            alt="Customers icon"
+          />
+          <img
+            class="h-12 w-12 rounded-lg object-contain md:h-16 md:w-16"
+            src="../images/policies-10.svg"
+            alt="Policies icon"
+          />
+        </div>
+
+        <div class="mt-8 space-y-6 text-lg text-gray-600 dark:text-gray-300">
+          <p>
+            I built a working React prototype rather than static mockups,
+            directing development with an AI coding agent. Code let me test what
+            a mockup can’t: how the design behaves against real (synthetic)
+            data.
+          </p>
+          <ul class="space-y-3 list-disc pl-6">
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >Data with something to find.</span
+              >
+              1,000 transactions and 150 customers, generated to intentionally contain these patterns:
+                          <ul
+              class="mt-2 list-disc space-y-2 pl-6 text-lg text-gray-500 dark:text-gray-400"
+            >
+              <li>A suspicious-looking merchant cluster</li>
+              <li>A merchant repeatedly resubmitting declined card authorizations (a “retry storm”)</li>
+              <li>High-value risk</li>
+              <li>Geographic concentration</li>
+            </ul>
+            </li>
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >A template that enforces the design.</span
+              >
+              Every answer must fill in the same structure: observations,
+              evidence with its basis, a confidence rationale, assumptions, and
+              SQL. An answer that can’t explain itself can’t be displayed.
+            </li>
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >A retrieval source.</span
+              >
+              10 fictional policy documents stand in for a bank’s policy
+              library.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900 mb-24">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Mistakes Found and Lessons Learned
+          </h2>
+        </div>
+
+        <div class="mt-8 grid gap-8 lg:grid-cols-2">
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.18em] text-red-600"
+            >
+              Mistake 1
+            </p>
+            <h3 class="mt-3 text-2xl font-bold text-gray-900 dark:text-white">
+              The AI Generated Unrealistic Datasets
+            </h3>
+            <p class="mt-4 text-gray-700 dark:text-gray-400">
+              The first dataset reported a
+              <span class="font-semibold">50.7% failure rate</span> for a single
+              day. This would be unrealistic to analysts. The data was rebalanced so the spike day reads
+              as a genuine spike (about 22%), with a cause the analysis explains.
+            </p>
+            <p class="mt-4 text-gray-700 dark:text-gray-400">
+              <span class="font-semibold">Lesson:</span> in a domain tool,
+              whether the numbers are believable is part of the UX.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-6 shadow-sm border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.18em] text-red-600"
+            >
+              Mistake 2
+            </p>
+            <h3 class="mt-3 text-2xl font-bold text-gray-900 dark:text-white">
+              How I Highlighted What Was and Wasn't AI
+            </h3>
+            <p class="mt-4 text-gray-700 dark:text-gray-400">
+              I initially had all AI text displayed in italics. But what about the fact that real data was being displayed by the AI? 
+            </p>
+            <p class="mt-4 text-gray-700 dark:text-gray-400">
+              I needed to explain that the sampled data was real, but still selected by the AI. Now the AI explains what data it chose to display and why.
+            </p>
+            <p class="mt-4 text-gray-700 dark:text-gray-400">
+              <span class="font-semibold">Lesson:</span> Being transparent about AI-generated writing is crucial. But transparency about <b>all</b> AI decisions is essential.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-900 mb-24 rounded-3xl">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Outcome
+          </h2>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl bg-white p-6 border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-3xl font-bold text-gray-900 dark:text-white">Live</p>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              A live, shareable prototype tested end to end: ask, analyze,
+              inspect, verify, follow up.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-3xl font-bold text-gray-900 dark:text-white">Outputs</p>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              5 guided investigations, 12 analysis types, and 3 response types
+              (answer, honest “can’t answer,” and access-restricted response).
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <p class="text-3xl font-bold text-gray-900 dark:text-white">Every answer</p>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              Carries confidence, rationale, graded evidence, underlying
+              transactions, generated SQL, assumptions, and cited sources where
+              policy applies.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 rounded-2xl border border-gray-200 bg-white p-6 dark:bg-gray-800 dark:border-gray-700">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+            How I’d measure success
+          </h3>
+          <ul
+            class="mt-4 space-y-3 list-disc pl-6 text-gray-600 dark:text-gray-400"
+          >
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >Verification rate:</span
+              >
+              how often analysts open the evidence or SQL before acting. Too low
+              signals over-trust.
+            </li>
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >Decision quality:</span
+              >
+              how many of the AI's recommendations are correct based on manual review by analysts.
+            </li>
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >Time to decision:</span>
+              compared with existing analyst workflows.
+            </li>
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >Recovery rate:</span
+              >
+              after a user gets stuck, how often the next question succeeds.
+            </li>
+            <li>
+              <span class="font-semibold text-gray-900 dark:text-white"
+                >A/B test:</span
+              >
+              a confidence badge alone vs. badge plus written rationale,
+              to see whether analysts’ trust matches actual accuracy.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900 mb-24 rounded-3xl">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="mx-auto max-w-3xl text-center">
+          <p
+            class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            WHAT’S NEXT
+          </p>
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            The next step is making this pattern real across the organization.
+          </h2>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2">
+          <div class="rounded-2xl bg-white p-6 border border-slate-200 dark:border-slate-700 dark:bg-gray-800">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">User research</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              Shadow 3–5 risk analysts, and test whether separating data from
+              interpretation actually changes what they write in case notes.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-slate-200 dark:border-slate-700 dark:bg-gray-800">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Accessibility</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              Confidence and risk currently rely on color. Add non-color cues
+              and run a WCAG 2.2 AA audit.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-slate-200 dark:border-slate-700 dark:bg-gray-800">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Design system</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              Turn the patterns (confidence meter, evidence item, source
+              citation, refusal card) into reusable components for other AI
+              features or make use of existing design system components.
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 border border-slate-200 dark:border-slate-700 dark:bg-gray-800">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">A real model</h3>
+            <p class="mt-3 text-gray-600 dark:text-gray-400">
+              The LLM would turn questions into queries and write the
+              explanation around the computed results. It would never generate
+              the numbers itself, so the SQL and evidence views become the
+              verification layer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-900 rounded-3xl mb-24">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16">
+        <div class="mx-auto max-w-3xl">
+          <p
+            class="font-normal pb-2 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            REFLECTION
+          </p>
+          <h2
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+          >
+            Designing AI for financial services isn’t about making the AI sound
+            smarter.
+          </h2>
+          <p class="text-lg text-gray-600 dark:text-gray-400">
+            It’s about making it honest about what it knows, clear about what it
+            doesn’t, and easy to verify, so the person accountable for the
+            decision can trust the right answers and catch the wrong ones.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              href="https://stellular-taiyaki-69a926.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+            >
+              View the live prototype
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-900 mt-36">
+      <div class="mx-auto max-w-screen-xl text-center">
+        <a
+          href="/index.html"
+          class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+        >
+          Jason DiPopolo
+        </a>
+        <p class="my-6 text-gray-500 dark:text-gray-400">Product Designer</p>
+        <ul
+          class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white"
+        >
+          <li>
+            <a href="/#works" class="mr-4 hover:underline md:mr-6">Works</a>
+          </li>
+          <li>
+            <a href="/contact.html" class="mr-4 hover:underline md:mr-6"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          ©<span class="js-current-year"></span>
+          <a href="/index.html" class="hover:underline">Jason DiPopolo</a> | All
+          Rights Reserved</span
+        >
+      </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  </body>
+</html>
