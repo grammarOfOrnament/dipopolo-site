@@ -151,19 +151,19 @@
               Overview
             </h2>
             <p class="mt-4 text-lg text-gray-500 dark:text-gray-400">
-              AI Data Investigator lets a risk or compliance analyst ask
+              AI Data Investigator lets a risk analyst ask
               questions about transaction data in plain English. Instead of a
-              paragraph, it returns a structured analysis:
+              paragraph, the AI returns a structured analysis:
             </p>
             <ul
               class="mt-4 list-disc space-y-2 pl-6 text-lg text-gray-500 dark:text-gray-400"
             >
-              <li>The finding.</li>
+              <li>The AI's findings.</li>
               <li>How confident it is and why.</li>
-              <li>The evidence behind it.</li>
-              <li>The underlying transactions.</li>
-              <li>The SQL it generated.</li>
-              <li>The policy it relied on.</li>
+              <li>The evidence behind it's conclusions.</li>
+              <li>The SQL it generated and why.</li>
+              <li>The transactions queried through the SQL.</li>
+              <li>Relevant policies it considered and why.</li>
             </ul>
             <div class="mt-8">
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
@@ -171,8 +171,7 @@
               </h3>
               <p class="mt-3 text-lg text-gray-500 dark:text-gray-400">
                 An experienced risk analyst that's fluent in data but not necessarily in
-                SQL. Their case notes have to distinguish what they observed from what
-                they concluded.
+                SQL. A risk analyst's goal is to identify, evaluate, and minimize potential threats that could harm an organization's financial health.
               </p>
             </div>
           </div>
@@ -184,7 +183,7 @@
               </h3>
               <p class="mt-3 text-lg text-gray-500 dark:text-gray-400">
                 Solo product designer and builder. I defined the problem and
-                interaction model, designed the trust and transparency patterns,
+                AI UX patterns to establish trust and transparency. I
                 directed development with an AI coding agent, and tested the
                 output to find and fix where the AI got things wrong.
               </p>
@@ -278,8 +277,7 @@
           >
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">Outcome</h3>
             <p class="mt-3 text-gray-600 dark:text-gray-400">
-              A working, hosted prototype over 1,000 synthetic transactions: 5
-              guided investigations, 12 analysis types, and 3 response types.
+              A working, hosted prototype over 1,000 synthetic transactions: 5 AI response examples covering multiple scenarios.
             </p>
           </div>
         </div>
@@ -296,21 +294,21 @@
               The Problem
             </h2>
             <p class="text-gray-600 dark:text-gray-400 text-lg">
-              Risk, compliance, and operations analysts spend their day
-              answering why:
+              Risk analysts spend their day answering why:
               <ul
               class="mt-4 list-disc space-y-2 pl-6 text-lg text-gray-500 dark:text-gray-400"
             >
-              <li>why did payments fail?</li>
-              <li>why is this merchant spiking?</li>
-              <li>which transactions need review?</li>
+              <li>Why did payments fail?</li>
+              <li>Why is this merchant spiking?</li>
+              <li>Which transactions need review?</li>
             </ul>
             </p>
             <p class="mt-6 text-gray-600 dark:text-gray-400 text-lg">
               The answers are in the data, but getting to them usually means writing SQL or waiting on
               someone who can. Can AI solve this? The common pattern, a chat
               window connected to a database, returns a fluent paragraph with no
-              way to <b>verify</b> it.
+              way to <span class="font-semibold text-gray-900 dark:text-white"
+                >verify</span> it.
             </p>
             <p class="mt-6 text-gray-600 dark:text-gray-400 text-lg">
               In a consumer app, a wrong answer is an
@@ -320,11 +318,10 @@
             </p>
             <p class="mt-6 text-gray-600 dark:text-gray-400 text-lg">
               So the design question wasn’t
-              <span class="italic">“how do we make AI answer questions?”</span>
+              <span class="italic">“how do I make AI answer questions?”</span>
               It was
               <span class="font-semibold text-gray-900 dark:text-white"
-                >“how do we make its answers verifiable?”</span
-              >
+                >“how do I make its answers verifiable?”</span>
             </p>
           </div>
 
@@ -418,19 +415,11 @@
                 3. Verify For Yourself
               </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
-                The underlying transactions, generated SQL, and reasoning are one click away.
+                The generated SQL, relevant transactions, and reasoning are showcased in every AI response.
               </p>
               <ul
                 class="mt-4 list-disc space-y-2 pl-5 text-gray-600 dark:text-gray-300"
               >
-                <li>
-                  <span class="font-semibold text-gray-900 dark:text-white"
-                    >Graded evidence:</span
-                  >
-                  each claim is tagged supporting, corroborating, or weak, along
-                  with how it was established. Weak evidence is shown, not
-                  hidden.
-                </li>
                 <li>
                   <span class="font-semibold text-gray-900 dark:text-white"
                     >"View transactions" Section:</span
@@ -444,13 +433,6 @@
                   >
                   a technical analyst can verify how their question became a
                   query.
-                </li>
-                <li>
-                  <span class="font-semibold text-gray-900 dark:text-white"
-                    >"Why am I seeing this?" Section:</span
-                  >
-                  explains the data analyzed, the pattern detected, the
-                  assumptions made, and what the confidence level means.
                 </li>
               </ul>
             </div>
@@ -518,25 +500,18 @@
             </div>
           </div>
 
-          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-gray-800">
-            <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-              6. The AI recommends; the analyst decides
-            </h3>
-            <p class="mt-4 text-gray-600 dark:text-gray-300">
-              Suggested next steps are labelled
-              <span class="font-semibold text-gray-900 dark:text-white"
-                >Advisory. Nothing here has been carried out.</span
-              >
-              Consequential actions such as escalating a case, restricting an
-              account, or contacting a customer stay with people. Every answer
-              also shows
-              <span class="font-semibold text-gray-900 dark:text-white"
-                >Interpreted as: …</span
-              >
-              so a misunderstood question is visible rather than silently
-              answered.
-            </p>
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                6. The AI Recommends & The Analyst Decides
+              </h3>
+              <p class="mt-4 text-gray-600 dark:text-gray-300">
+                Suggested next steps are labelled "Advisory. Nothing here has been carried out." Labels like "Interpreted as..." and use of italics to distinguish all AI-generated writing allow the analyst to make up their own mind based on not only the recommendations, but more importantly, the real data. 
+              
+            </div>
+              <img src="../images/aiDataInvestigator-recommended_next_steps.avif" class="rounded-md border border-gray-200 dark:border-gray-600" alt="Data vs. interpretation">
           </div>
+
         </div>
       </div>
     </section>
@@ -603,7 +578,7 @@
             </li>
             <li>
               <span class="font-semibold text-gray-900 dark:text-white"
-                >A template that enforces the design.</span
+                >The response template creates predictable AI output.</span
               >
               Every answer must fill in the same structure: observations,
               evidence with its basis, a confidence rationale, assumptions, and
@@ -697,17 +672,15 @@
           <div class="rounded-2xl bg-white p-6 border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
             <p class="text-3xl font-bold text-gray-900 dark:text-white">Outputs</p>
             <p class="mt-3 text-gray-600 dark:text-gray-400">
-              5 guided investigations, 12 analysis types, and 3 response types
-              (answer, honest “can’t answer,” and access-restricted response).
+              5 AI response examples and 3 response types
+              (answer, an honest “can’t answer” for impossible questions, and access-restricted responses for when it doesn't have access necessary to answer a question).
             </p>
           </div>
           <div class="rounded-2xl bg-white p-6 border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
             <p class="text-3xl font-bold text-gray-900 dark:text-white">Every answer</p>
             <p class="mt-3 text-gray-600 dark:text-gray-400">
-              Carries confidence, rationale, graded evidence, underlying
-              transactions, generated SQL, assumptions, and cited sources where
-              policy applies.
-            </p>
+              Carries confidence, rationale, underlying
+              transactions, generated SQL, and cited sources in the form of policy documents.</p>
           </div>
         </div>
 
@@ -722,7 +695,7 @@
               <span class="font-semibold text-gray-900 dark:text-white"
                 >Verification rate:</span
               >
-              how often analysts open the evidence or SQL before acting. Too low
+              how often analysts read why the AI did what it did before acting. If not often enough, this
               signals over-trust.
             </li>
             <li>
@@ -741,13 +714,6 @@
                 >Recovery rate:</span
               >
               after a user gets stuck, how often the next question succeeds.
-            </li>
-            <li>
-              <span class="font-semibold text-gray-900 dark:text-white"
-                >A/B test:</span
-              >
-              a confidence badge alone vs. badge plus written rationale,
-              to see whether analysts’ trust matches actual accuracy.
             </li>
           </ul>
         </div>
