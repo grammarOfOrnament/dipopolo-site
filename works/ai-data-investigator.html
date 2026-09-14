@@ -360,8 +360,7 @@
       <div class="py-8 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-16 my-24">
         <div class="mx-auto max-w-3xl text-center">
           <h2
-            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
-          >
+            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
             Key Design Decisions
           </h2>
         </div>
@@ -370,18 +369,24 @@
           <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                1. AI Insights vs Real Data
+                1. Transparent AI Loading Patterns
               </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
-                Measured facts appear in a plain "Observed data"
-                grid. The AI’s reading appears in a separately styled block,
-                labelled "AI interpretation (not observed data)." The two never blend.
+                Instead of a mysterious black box that spits out a response to a prompt, the loading spinner and progress bullets show that the AI is reading the data, generating SQL, and analyzing the results. The user can see the AI is working on their question and what it’s doing.
               </p>
+            </div>
+
+              <img src="../images/aiDataInvestigator-loading.avif" class="rounded-md border border-gray-200 dark:border-gray-600" alt="Data vs. interpretation">
+          </div>
+
+        <div class="mt-10 space-y-10">
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                2. AI Insights vs Real Data
+              </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
-                <span class="font-semibold text-gray-900 dark:text-white"
-                  >Why:</span>
-                compliance case notes must keep facts separate from judgment. An
-                interface that blends them teaches analysts to blend them too.
+                The actual SQL query results the AI is reading from are displayed for the user. The AI can answer questions based on these results, but the distinction between the real query results and AI interpretation is maintained. The two never blend.
               </p>
             </div>
 
@@ -391,7 +396,7 @@
           <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                2. Clear Confidence Scores
+                3. Clear Confidence Scores
               </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
                 Every answer carries a High, Moderate, or Low rating plus a
@@ -412,7 +417,7 @@
           <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                3. Verify For Yourself
+                4. Verify For Yourself
               </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
                 The generated SQL, relevant transactions, and reasoning are showcased in every AI response.
@@ -446,7 +451,7 @@
           <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                4. Sources the AI Can Cite (RAG)
+                5. Sources the AI Can Cite (RAG)
               </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
                 Policy questions retrieve from a library of fictional policy
@@ -465,7 +470,7 @@
           <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                5. Ensuring the AI Refuses to Answer When It Shouldn’t
+                6. Ensuring the AI Refuses to Answer When It Shouldn’t
               </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
                 The AI is trained to refuse questions it can’t answer, and to explain why. Two common cases are uncertainty and permissions:
@@ -503,7 +508,7 @@
           <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                6. The AI Recommends & The Analyst Decides
+                7. The AI Recommends & The Analyst Decides
               </h3>
               <p class="mt-4 text-gray-600 dark:text-gray-300">
                 Suggested next steps are labelled "Advisory. Nothing here has been carried out." Labels like "Interpreted as..." and use of italics to distinguish all AI-generated writing allow the analyst to make up their own mind based on not only the recommendations, but more importantly, the real data. 
