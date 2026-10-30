@@ -158,24 +158,44 @@
           </a>
         </div>
 
-        <!-- Image Comparison Slider -->
-        <!-- Source: https://github.com/CodyHouse/image-comparison-slider -->
         <div class="my-8 sm:my-16">
-          <div class="image-spliter rounded-xl shadow-xl">
-            <div class="mover"></div>
+          <div
+            class="resume-comparison rounded-xl shadow-xl"
+            data-image-comparison
+            style="--comparison-position: 50%"
+          >
             <img
-              class="slider-img img-left"
-              src="https://live.staticflickr.com/65535/53527506295_76bb75151d_h.jpg"
-            />
-            <img
-              class="slider-img img-right"
+              class="resume-comparison__image"
+              alt="Resume builder before the redesign"
               src="https://live.staticflickr.com/65535/53527240473_01a540456e_h.jpg"
             />
+            <div class="resume-comparison__before">
+              <img
+                class="resume-comparison__image"
+                alt="Resume builder after the redesign"
+                src="https://live.staticflickr.com/65535/53527506295_76bb75151d_h.jpg"
+              />
+            </div>
+            <span class="resume-comparison__label resume-comparison__label--before" aria-hidden="true">Before</span>
+            <span class="resume-comparison__label resume-comparison__label--after" aria-hidden="true">After</span>
+            <input
+              class="resume-comparison__control"
+              type="range"
+              min="0"
+              max="100"
+              step="any"
+              value="50"
+              aria-label="Compare the resume builder before and after the redesign"
+              aria-valuetext="50% before image shown"
+            />
+            <div class="resume-comparison__divider" aria-hidden="true">
+              <span class="resume-comparison__handle">↔</span>
+            </div>
           </div>
           <p
             class="mt-4 text-base text-center font-normal text-gray-500 dark:text-gray-400 md:max-w-3xl md:mx-auto sm:text-xl"
           >
-            Slide to view the before (left) and after (right).
+            Drag the handle, tap anywhere on the image, or use the arrow keys to compare.
           </p>
         </div>
 
@@ -507,8 +527,7 @@
       </div>
     </footer>
 
-    <!-- Image Comparison Slider -->
-    <script src="/image-comparison-slider.min.js"></script>
+    <script src="/image-comparison-slider.js"></script>
 
     <!-- Flowbite CDN (End of Body) -->
     <script src="/script.js"></script>
